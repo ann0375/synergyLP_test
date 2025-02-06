@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <mata name="description" content="no description">
+        <link rel="stylesheet" href="./style/sanitize.css">
+        <!-- UIkitのCSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/css/uikit.min.css" />
+        <!-- UIkitのJavaScript（jQuery不要）-->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit-icons.min.js"></script>
+
+        <link rel="stylesheet" href="./style/style.css">
+        <title>LP test</title>
+</head>
+
+<body class="all">
+
+    <section id="header" class="header">
+        <div class="uk-container uk-container-expand">
+            <div uk-navbar="" class="uk-navbar">
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" href="https://shotnavi.jp/"><img src="../imgs/logo_shotnavi.png" style="max-width:150px;"></a>
+            </div>
+            <ul class="uk-navbar-nav uk-visible@s uk-subnav-divider uk-text-center uk-margin-left">
+                <li><a href="https://shotnavi.jp/">HOME</a></li>
+                <li class="uk-text-left">
+                <a href="https://shotnavi.jp/snp/" role="button" aria-haspopup="true">ShotNavi</a>
+                <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2 uk-drop" style="top: 95px; left: 283.172px; max-width: 1624px;">
+                    <div class="uk-navbar-dropdown-grid uk-child-width-1-2 uk-grid uk-grid-stack" uk-grid="">
+                    <div class="uk-first-column">
+
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-nav-header">Shot Navi GPS</li>
+                        <li class="uk-nav-divider"></li>
+                        <li class="uk-active"><a href="/snp/air/">Air (New!)</a></li>
+                        <li><a href="/snp/crest/">Crest</a></li>
+                        <li><a href="/snp/evolve/">W1 Evolve</a></li>
+                        <li><a href="/snp/beyondlite/">HuG beyond Lite</a></li>
+                        <li><a href="/snp/beyond/">HuG beyond</a></li>
+                        <li><a href="/snp/neo2hp/">NEO2 HP</a></li>
+                        <li><a href="/snp/hugfw/">HuG-FW</a></li>
+                        <li><a href="/snp/v2/">V2</a></li>
+                        <li><a href="/snp/w1fw/">W1-FW</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-nav-header">Voice Laser</li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="/snp/voicelaser/redleo/">Red LEO</a></li>
+                        <li><a href="/snp/voicelaser/leo/">LEO</a></li>
+                        <li class="uk-nav-header">Laser Sinper</li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="/snp/lasersniper/nano/">nano</a></li>
+                        <li><a href="/snp/lasersniper/x1fit2/">Fit2 1000</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                </li>
+                <li><a href="https://shotnavi.jp/scolog/">SCOログ</a></li>
+                <li><a href="https://shotnavi.jp/gc/">ゴルフ場情報</a></li>
+                <li><a href="https://shotnavi.thebase.in/" target="_blank">公式ショップ</a></li>
+                <li><a href="https://shotnavi.jp/mypage/">マイページ</a></li>
+            </ul>
+
+            <div class="uk-navbar-right uk-hidden@s">
+                <div class="uk-navbar-nav">
+                <li class="uk-active uk-padding-remove"><a href="#" role="button" aria-haspopup="true" aria-label="Open menu"><span uk-navbar-toggle-icon="" class="uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20"><style>.uk-navbar-toggle-icon svg&gt;[class*="line-"]{transition:0.2s ease-in-out;transition-property:transform, opacity;transform-origin:center;opacity:1}.uk-navbar-toggle-icon svg&gt;.line-3{opacity:0}.uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;.line-3{opacity:1}.uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;.line-2{transform:rotate(45deg)}.uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;.line-3{transform:rotate(-45deg)}.uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;.line-1,.uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;.line-4{opacity:0}.uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;.line-1{transform:translateY(6px) scaleX(0)}.uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;.line-4{transform:translateY(-6px) scaleX(0)}</style><rect width="20" height="2" y="3" class="line-1"></rect><rect width="20" height="2" y="9" class="line-2"></rect><rect width="20" height="2" y="9" class="line-3"></rect><rect width="20" height="2" y="15" class="line-4"></rect></svg></span> <span class="uk-margin-small-left">Menu</span></a>
+                    <div class="uk-navbar-dropdown uk-drop">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="https://shotnavi.jp/">HOME</a></li>
+                        <li><a href="https://shotnavi.jp/snp/">ShotNavi</a></li>
+                        <li><a href="https://shotnavi.jp/scolog/">SCOログ</a></li>
+                        <li><a href="https://shotnavi.jp/gc/">ゴルフ場情報</a></li>
+                        <li><a href="https://shotnavi.thebase.in/" target="_blank">公式ショップ</a></li>
+                        <li><a href="https://shotnavi.jp/mypage/">マイページ</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="top" class="top">
+        <img src="" class="top_Img">
+        <p class="sub_copy">
+            主観から客観的な自己認知
+        </p>
+        <h1 class="catch_copy">
+            ゴルフはデータで<span style="font-size:1.4em"><span style="color: aqua;">進化</span> </span>する
+        </h1>
+    </section>
+
+    <section id="concept" class="concept">
+        <h1 class="concept_title">
+            感覚的な理解から<br/>
+            データに基づく分析で
+        </h1>
+        <h2 class="concept_section_title">
+            Concept
+        </h2>
+        <p class="cocept_text">
+            ゴルフは「再現性のスポーツ」と言われており、同じショットを何度も正確に繰り返すことがスコアメイクにつながります。<br/>
+            ショットの再現性が高ければ、プレーの結果が安定し、スコアを向上させることが可能です。<br/><br/>
+            私たちは、ゴルフスイングの効果的なトレーニングを支援するため、タイミング、精度、姿勢などの技術要素を効率的に改善できる製品は実現できないかというコンセプトを基に新しい機器を企画し開発しました。<br/><br/>
+            従来からある各種指標を計測できる装置を再定義し、その装置装置が持つ各々の機能を結びつけ、新たな価値を想像します。
+        </p>
+    </section>
+    <section id="synergy" class="synergy">
+        <div class="synergy_description">
+            <h2 class="synergy_description_title">
+                製品と製品が繋がることで
+                生まれるシナジー効果
+            </h2>
+            <p>
+                様々な指標を計測する製品が連携することで、単独の製品のみでは得られない新たな価値を創造します。
+            </p>
+            <h3>
+                点と点のシナジー効果
+            </h3>
+            <p>
+                「点と点がつながることで、個々の力が掛け算のように増幅する。」​単独では何もない点が、他の点と結びつくことで初めて力を発揮します。それぞれが持つポテンシャルが組み合わさり、全体としては個々の合計を超える力を生み出すのです。まるでバラバラだったピースがひとつになり、全く新しい価値を生み出すような感覚です。
+            </p>
+            <h3>
+                線と線のシナジー効果
+            </h3>
+            <p>
+                「線と線が交差することで、直線では見えなかった可能性が広がる。」​個々の線が交わることで、新しい方向性や視点が生まれ、それぞれの線がもつエネルギーや情報が融合し、予想以上の価値を生み出します。たとえば、異なる分野の知識や技術が交わることで、独自の解決策や創造的な結果が導き出されるのです。
+            </p>
+        </div>
+        <div class="synergy_Img">
+            <img src="" class="synergy_Img">
+            <div class="synergy_section_title">
+                Synergy
+            </div>
+        </div>
+        <div class="synergy_summary">
+            <div>
+                このように、点と点、線と線が交わることで、<br/>
+                単独では成し得なかった成果が生まれ、<br/>
+                シナジー効果が発揮されます。​<br/>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="solution">
+        <div class="solution_title">
+            自分を深く理解することで、新たな未来が待っている
+        </div>
+        <div class="solution_subtitle">
+            データに基づいた科学的アプローチで隠れた課題を明確化。上達をサポートします
+        </div>
+        <div class="IoB_text">
+            Internet of Bodies
+        </div>
+        <!-- ペンタゴンの形のカード入れたい -->
+        <img src="" class="solution_Img"> 
+        <img src="" class="solution_box">
+    </section>
+
+    <section id="products" class="products">
+        <div class="products_section_title">
+            Products
+        </div>
+        <!-- カード３つ、斜め線区切り -->
+        <div class="矢印のところ（後で編集）">
+            <!-- <div で三角形を作る></div> -->
+            <div class="products_subtitle">
+                練習からプレーまで、活躍する多機能デバイス
+            </div>
+            <div class="products_text">
+                INSOLYISでCoPを分析、Shot Lyzerでスピードを記録。<br/>
+                さらにクラブをShot Trackerで識別することで全てを自動化。<br/>
+                組み合わせることで、より上達を実感できます<br/>
+            </div>
+        </div>
+    </section>
+
+    <section id="feature" class="feature">
+        <h1 class="feature_title">
+            機能紹介
+        </h1>
+        <ul uk-tab class="feature_tab">
+            <li class="uk-active">
+                <img src="" class="app_icon">
+                <a href="#">アプリ連携</a>
+            </li>
+            <li class="uk-active">
+                <img src="" class="shot_icon">
+                <a href="#">履歴・分析機能</a>
+            </li>
+            <li class="uk-active">
+                <img src="" class="cop_icon">
+                <a href="#">CoP測定</a>
+            </li>
+            <li class="uk-active">
+                <img src="" class="speed_icon">
+                <a href="#">スピード計測</a>
+            </li>
+            <li class="uk-active">
+                <img src="" class="tracker_icon">
+                <a href="#">クラブ識別</a>
+            </li>
+        </ul>
+        <div class="feature_background_text">
+            Feature<br/>
+            Introduction
+        </div>
+        <div class="feature_carousel">
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="feature_app">
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/light.jpg" width="1800" height="1200" alt="">
+                            <img src="" class="feature_app_content">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
+                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="feature_synergy">
+                    <div class="uk-card uk-card-default">
+                         <div class="uk-card-media-top">
+                            <img src="images/light.jpg" width="1800" height="1200" alt="">
+                            <img src="" class="feature_synergy_content">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
+                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="feature_lyzer">
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/light.jpg" width="1800" height="1200" alt="">
+                            <img src="" class="feature_lyzer_conten">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
+                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="feature_insolyis">
+                    <div class="uk-card uk-card-default">
+                         <div class="uk-card-media-top">
+                            <img src="images/light.jpg" width="1800" height="1200" alt="">
+                            <img src="" class="feature_insolyis_content">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
+                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="feature_tracker">
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/light.jpg" width="1800" height="1200" alt="">
+                            <img src="" class="feature_tracker_content">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
+                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="situation" class="situation">
+        <div class="situation_section_title">
+            Situation
+        </div>
+        <div class="situation_title">
+            シチュエーションごとの活用法
+        </div>
+        <div class="situation_subtitle">
+            様々なシチュエーションで上達を徹底サポート
+        </div>
+        <div class="situation_Img">
+            <img src="situation_content_Img" class="situation_content_Img">
+            <div class="situation_1">
+                <h3 class="situation_school_title">
+                    ゴルフレッスンやスクールで客観的にサポート
+                </h3>
+                <p class="situation_school_text">
+                    レッスン場で使用することで課題をデータで可視化。<br/>
+                    客観的データで、課題改善をさらに効率的に
+                </p>
+            </div>
+            <div class="situation_2">
+                <h3 class="situation_training_title">
+                    日々の練習でデータを分析、効率よく上達
+                </h3>
+                <p class="situation_training_text">
+                    毎日の練習で収集したデータをもとに、スイングの傾向や癖を把握。<br/>
+                    科学的なアプローチで確実な成長を実現します
+                </p>
+            </div>
+            <div class="situation_3">
+                <h3 class="situation_play_title">
+                    実際のプレー中に記録・分析し、安定感を強化
+                </h3>
+                <p class="situation_play_text">
+                    コースでの重心やスピードデータをリアルタイムで記録。<br/>
+                    実戦の中で弱点を発見し、すぐにプレーに活かせます
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="review" class="review">
+        <h3 class="review_title">
+            実際に使ってみて
+        </h3>
+        <div class="uk-panel">
+            <img class="uk-align-left uk-margin-remove-adjacent" src="images/light.jpg" width="225" height="150" alt="Example image">
+            <p class="review_name">
+                鈴木 真緒選手（ドラコンプロ）
+            </p>
+            <p class="review_comment">
+                大会前の練習で使ってみて、本当に驚きました！重心の移動を可視化できるインソールは、普段気づかなかった体幹のクセを教えてくれました。速度計測器はクラブスピード以外にもミート率が一目でわかるので、効率よく改善点が見つけられます。データを見ながら練習すると、自分がどこを直せばいいかがすごくクリアになるので、大会に向けた準備がしやすくなりました。これからも活用していきたいと思います！
+            </p>
+        </div>
+    </section>
+
+    <section id="detail" class="detail">
+        <div class="detail_title">
+            DETAILS
+        </div>
+        <div class="detail_subtitle">
+            商品詳細
+        </div>
+        <div class="detail_card">
+            <ul class="detail_card_insolyis">
+                <li>
+                    <img src="" class="detail_card_insolyis_logo">
+                    <img src="" class="detail_card_insolyis_content">
+                    <p>
+                        ¥XX,XXX- (税込)
+                    </p>
+                    <button class="detail_button">
+                        商品を購入する
+                    </button>
+                    <table border="1">
+                        <tr>
+                          <th>寸法</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>重量</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>ディスプレイ</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>バッテリー</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>防水</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>使用可能時間</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>データ更新方法</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>付属品</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>ここは情報を</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                      </table>
+                </li>
+            </ul>
+            <ul class="detail_card_lyzer">
+                <li>
+                    <img src="" class="detail_card_lyzer_logo">
+                    <img src="" class="detail_card_lyzer_content">
+                    <p>
+                        ¥XX,XXX- (税込)
+                    </p>
+                    <button class="detail_button">
+                        商品を購入する
+                    </button>
+                    <table border="1">
+                        <tr>
+                          <th>寸法</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>重量</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>ディスプレイ</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>バッテリー</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>防水</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>使用可能時間</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>データ更新方法</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>付属品</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>ここは情報を</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                      </table>
+                </li>
+            </ul>
+            <ul class="detail_card_tracker">
+                <li>
+                    <img src="" class="detail_card_tracker_logo">
+                    <img src="" class="detail_card_tracker_content">
+                    <p>
+                        ¥XX,XXX- (税込)
+                    </p>
+                    <button class="detail_button">
+                        商品を購入する
+                    </button>
+                    <table border="1">
+                        <tr>
+                          <th>寸法</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>重量</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>ディスプレイ</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>バッテリー</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>防水</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>使用可能時間</th><td>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>データ更新方法</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>付属品</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                        <tr>
+                          <th>ここは情報を</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
+                        </tr>
+                      </table>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="FAQ" class="FAQ">
+        <div class="FAQ_title">
+            よくある質問
+        </div>
+        <div class="FAQ_subtitle">
+            Q&A
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+            <div class="FAQ_box1_Q">
+                    <h3 class="uk-card-title">
+                        Q
+                    </h3>
+                <ul uk-accordion="multiple: true" class="uk-accordion">
+                    <li class="uk-open">
+                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
+                            インソールのサイズについて教えてください。
+                        </a>
+                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
+                            <h3 class="uk-card-title">
+                                A
+                            </h3>
+                            <p>
+                                xxcm〜xxcmまで対応しております。<br/>
+                                カットが可能なので前後のサイズ調整まで可能です。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact">
+            その他ご質問やご購入など、お気軽にお問い合わせください
+        </div>
+        <button class="contact_button">
+            ✉️お問い合わせ
+        </button>
+    </section>
+
+    <div class="uk-container uk-container-xlarge">
+        <div class="uk-section-xsmall">
+          <hr>
+          <div class="uk-section-xsmall uk-text-center">
+            <p>
+              <a href="/docs/service/"><button class="uk-button uk-button-secondary uk-margin">ご利用案内</button></a>
+              <a href="/docs/info/rule.php"><button class="uk-button uk-button-secondary uk-margin">ご利用規約</button></a>
+              <a href="/docs/info/privacy.php"><button class="uk-button uk-button-secondary uk-margin">プライバシーポリシー</button></a>
+              <a href="/docs/info/hanbai.php"><button class="uk-button uk-button-secondary uk-margin">特定商取引に基づく表示</button></a>
+              <a href="http://www.techtuit.co.jp/"><button class="uk-button uk-button-secondary uk-margin">会社情報</button></a>
+            </p>
+          </div>
+          <div class="uk-section-xsmall uk-text-right uk-padding-remove -uk-margin-remove">
+            <small>「Shot Navi」はテクタイト株式会社の登録商標です。
+              <br>Copyright © 2022 Techtuit Co., Ltd. All Rights Reserved.</small>
+          </div>
+        </div>
+      </div>
+
+
+
+
+</body>
+
+</html>
