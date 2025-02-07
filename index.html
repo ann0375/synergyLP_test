@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <mata name="description" content="no description">
+    <meta name="description" content="no description">
         <link rel="stylesheet" href="./style/sanitize.css">
         <!-- UIkitのCSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/css/uikit.min.css" />
@@ -13,6 +13,7 @@
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit-icons.min.js"></script>
 
         <link rel="stylesheet" href="./style.css">
+        <script src="./feature.js" defer></script>
         <title>LP test</title>
 </head>
 
@@ -220,12 +221,50 @@
             Products
         </div>
         <!-- カード３つ、斜め線区切り -->
-        <div class="矢印のところ（後で編集）">
-            <!-- <div で三角形を作る></div> -->
-            <div class="products_subtitle">
+         <div class="product_card">
+            <!-- カード1 INSOLYIS -->
+            <div class="product_card_content1">
+                <img src="./assets/product/INSOLYIS_logo 1.svg" class="product_insolyis_logo">
+                <img src="./assets/product/INSOLYIS2足クロス.png" class="product_insolyis_Img">
+                <p class="product_insolyis_text">
+                    足圧重心（CoP）の移動を可視化<br/>
+                    スイング中の体重移動やバランスがどのようになっているかを分析
+                </p>
+                <button class="product_description_button">
+                    商品詳細を見る
+                </button>
+            </div>
+            <!-- カード2 LYZER -->
+            <div class="product_card_content2">
+                <img src="./assets/product/SHOTLYZER_logo.svg" class="product_lyzer_logo">
+                <img src="./assets/product/速度計_2.png" class="product_lyzer_Img">
+                <p class="product_lyzer_text">
+                    足圧重心（CoP）の移動を可視化<br/>
+                    スイング中の体重移動やバランスがどのようになっているかを分析
+                </p>
+                <button class="product_description_button">
+                    商品詳細を見る
+                </button>
+            </div>
+            <!-- カード3 Tracker -->
+            <div class="product_card_content3">
+                <img src="./assets/product/Shot_TRACKER_logo.svg" class="product_tracker_logo">
+                <img src="./assets/product/shot_Tracker003.png" class="product_tracker_Img">
+                <p class="product_tracker_text">
+                    足圧重心（CoP）の移動を可視化<br/>
+                    スイング中の体重移動やバランスがどのようになっているかを分析
+                </p>
+                <button class="product_description_button">
+                    商品詳細を見る
+                </button>
+            </div>
+         </div>
+        <div class="next">
+            <div class="product_triangle" id="makeImg"></div>
+            <div class="product_subtitle">
                 練習からプレーまで活躍する多機能デバイス
             </div>
-            <div class="products_text">
+            <div class="product_text">
                 INSOLYISで足圧中心（CoP）を分析、Shot Lyzerでクラブスピードを記録。<br/>
                 さらにクラブをShot Trackerで識別することで全てを自動化。<br/>
                 組み合わせて使うことで、自分のパフォーマンスを効率よく把握でき、上達をサポートします。
@@ -233,29 +272,29 @@
         </div>
     </section>
 
-    <section id="feature" class="feature">
+    <!-- <section id="feature" class="feature">
         <h1 class="feature_title">
             機能紹介
         </h1>
         <ul uk-tab class="feature_tab">
             <li class="uk-active">
-                <img src="" class="app_icon">
+                <img src="./assets/feature/step-icon_app連携.png" class="app_icon">
                 <a href="#">アプリ連携</a>
             </li>
             <li class="uk-active">
-                <img src="" class="shot_icon">
+                <img src="./assets/feature/step-icon_ショット.png" class="shot_icon">
                 <a href="#">履歴・分析機能</a>
             </li>
             <li class="uk-active">
-                <img src="" class="cop_icon">
+                <img src="./assets/feature/step-icon_インソールの足圧.png" class="cop_icon">
                 <a href="#">CoP測定</a>
             </li>
             <li class="uk-active">
-                <img src="" class="speed_icon">
+                <img src="./assets/feature/step-icon_速度.png" class="speed_icon">
                 <a href="#">スピード計測</a>
             </li>
             <li class="uk-active">
-                <img src="" class="tracker_icon">
+                <img src="./assets/feature/ShotTracker_icon.png" class="tracker_icon">
                 <a href="#">クラブ識別</a>
             </li>
         </ul>
@@ -339,7 +378,132 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section id="feature" class="feature">
+        <h1 class="feature_title">
+            機能紹介
+        </h1>
+        <div class="tab_wrap">
+            <input id="TAB_01" type="radio" name="TAB" class="tab_switch" checked="checked" />
+            <label class="tab_label" for="TAB_01">
+                <img src="./assets/feature/step-icon_app連携.png" alt="app_icon" class="tab_icon">
+                <span>アプリ連携</span>
+            </label>
+            <div class="tab_content">
+                <div class="feature_card">
+                    <div class="feature_card_img">
+                        <img src="./assets/feature/feature_app.png" alt="Product">
+                    </div>
+                    <div class="feature_card_text">
+                        <h3 class="feature_card_title">
+                            アプリを介して製品同士の機能が連携、新たな指標が明確に
+                        </h3>
+                        <p class="feature_card_desc">
+                            Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br/>
+                            各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br/>
+                            例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <input id="TAB_02" type="radio" name="TAB" class="tab_switch" />
+            <label class="tab_label" for="TAB_02">
+                <img src="./assets/feature/step-icon_ショット.png" alt="shot_icon" class="tab_icon">
+                <span>履歴・分析機能</span>
+            </label>
+            <div class="tab_content">
+                <div class="feature_card">
+                    <div class="feature_card_img">
+                        <img src="./assets/feature/feature_synergy.png" alt="Product">
+                    </div>
+                    <div class="feature_card_text">
+                        <h3 class="feature_card_title">
+                            アプリを介して製品同士の機能が連携、新たな指標が明確に
+                        </h3>
+                        <p class="feature_card_desc">
+                            Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br/>
+                            各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br/>
+                            例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <input id="TAB_03" type="radio" name="TAB" class="tab_switch" />
+            <label class="tab_label" for="TAB_03">
+                <img src="./assets/feature/step-icon_速度.png" alt="speed_icon" class="tab_icon">
+                <span>スピード計測</span>
+            </label>
+            <div class="tab_content">
+                <div class="feature_card">
+                    <div class="feature_card_img">
+                        <img src="./assets/feature/feature_lyzer.png" alt="Product">
+                    </div>
+                    <div class="feature_card_text">
+                        <h3 class="feature_card_title">
+                            アプリを介して製品同士の機能が連携、新たな指標が明確に
+                        </h3>
+                        <p class="feature_card_desc">
+                            Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br/>
+                            各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br/>
+                            例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <input id="TAB_04" type="radio" name="TAB" class="tab_switch" />
+            <label class="tab_label" for="TAB_04">
+                <img src="./assets/feature/step-icon_インソールの足圧.png" alt="speed_icon" class="tab_icon">
+                <span>CoP計測</span>
+            </label>
+            <div class="tab_content">
+                <div class="feature_card">
+                    <div class="feature_card_img">
+                        <img src="./assets/feature//feature_insolyis.png" alt="Product">
+                    </div>
+                    <div class="feature_card_text">
+                        <h3 class="feature_card_title">
+                            アプリを介して製品同士の機能が連携、新たな指標が明確に
+                        </h3>
+                        <p class="feature_card_desc">
+                            Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br/>
+                            各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br/>
+                            例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <input id="TAB_05" type="radio" name="TAB" class="tab_switch" />
+            <label class="tab_label" for="TAB_05">
+                <img src="./assets/feature/ShotTracker_icon.png" alt="speed_icon" class="tab_icon">
+                <span>クラブ識別</span>
+            </label>
+            <div class="tab_content">
+                <div class="feature_card">
+                    <div class="feature_card_img">
+                        <img src="./assets/feature/feature_tracker.png" alt="Product">
+                    </div>
+                    <div class="feature_card_text">
+                        <h3 class="feature_card_title">
+                            アプリを介して製品同士の機能が連携、新たな指標が明確に
+                        </h3>
+                        <p class="feature_card_desc">
+                            Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br/>
+                            各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br/>
+                            例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- インジケーター（ドット） -->
+                <div class="carousel-indicators"></div>
     </section>
+        
 
     <section id="situation" class="situation">
         <div class="situation_section_title">
