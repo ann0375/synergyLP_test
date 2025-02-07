@@ -661,6 +661,13 @@ PRODUCT
     background-color: #fff;
 }
 .review{}
+.review_triangle{
+    width: 10w;
+    height: 20vh;
+    border-style:solid;
+    border-width: 0 100px 100px 100px;
+    position: absolute;
+}
 .review_title{
     background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
     -webkit-background-clip: text;
@@ -668,11 +675,21 @@ PRODUCT
     text-align: center;
     letter-spacing: 0.2em;
 }
-.uk-panel{}
-.uk-align-left{}
+.uk-panel{
+    padding: 6vw 6vh;
+    align-items: center;
+    justify-content: center;
+}
+.uk-align-left{
+    border-radius: 1vh;
+}
 .uk-margin-remove-adjacent{}
-.review_name{}
-.review_comment{}
+.review_name{
+    color: #110F1B;
+}
+.review_comment{
+    color: #110F1B;
+}
 
 
 /*
