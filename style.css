@@ -373,6 +373,7 @@ PRODUCT
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 20vh;
 }
 .feature{}
 .feature_title{
@@ -568,65 +569,113 @@ PRODUCT
 .uk-child-width-1-2@m{} */
 
 
+/* SITUATION */
+#situation{
+    background-color: #ffffff;
+    width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    min-height: 80vh;
+}
+.situation{}
+.situation_section_title{
+    font-size: 6vw;
+    font-weight: lighter;
+    color: #378BDB;
+    transform: skewX(-15deg);
+    text-align: right;
+    margin: 0 0 -4vh 6vw;
+
+}
+.situation_title{
+    font-size: 36px;
+    background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 10vh 0 1vh 0;
+    position: relative;
+}
+.situation_title::after {
+    position: absolute;
+    content: "";
+    background-color: #186EA3;
+    width: 60vw;
+    height: 6px; 
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.situation_subtitle{
+    text-align: center;
+    margin: 1vh 0 8vh;
+    color: #110F1B;
+}
+.situation_Img{
+    /* position: relative;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    background-image: url("./assets/situation/situation.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; */
+
+}
+.situation_content_Img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* height: auto;
+    min-height: 50vh; */
+    object-fit: contain;
+    z-index: 1;
+}
+.text_overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    z-index: 10;
+}
+.situation_1, .situation_3{
+    align-self: flex-start;
+    color: #fff;
+}
+.situation_2{
+    align-self: flex-end;
+    color: #fff;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+
+/* REVIEW */
+#review{
+    background-color: #fff;
+}
+.review{}
+.review_title{
+    background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+.uk-panel{}
+.uk-align-left{}
+.uk-margin-remove-adjacent{}
+.review_name{}
+.review_comment{}
+
 
 /*
-<section id="situation" class="situation">
-<div class="situation_section_title">
-    Situation
-</div>
-<div class="situation_title">
-    シチュエーションごとの活用法
-</div>
-<div class="situation_subtitle">
-    様々なシチュエーションで上達を徹底サポート
-</div>
-<div class="situation_Img">
-    <img src="situation_content_Img" class="situation_content_Img">
-    <div class="situation_1">
-        <h3 class="situation_school_title">
-            ゴルフレッスンやスクールで客観的にサポート
-        </h3>
-        <p class="situation_school_text">
-            レッスン場で使用することで課題をデータで可視化。<br/>
-            客観的データで、課題改善をさらに効率的に
-        </p>
-    </div>
-    <div class="situation_2">
-        <h3 class="situation_training_title">
-            日々の練習でデータを分析、効率よく上達
-        </h3>
-        <p class="situation_training_text">
-            毎日の練習で収集したデータをもとに、スイングの傾向や癖を把握。<br/>
-            科学的なアプローチで確実な成長を実現します
-        </p>
-    </div>
-    <div class="situation_3">
-        <h3 class="situation_play_title">
-            実際のプレー中に記録・分析し、安定感を強化
-        </h3>
-        <p class="situation_play_text">
-            コースでの重心やスピードデータをリアルタイムで記録。<br/>
-            実戦の中で弱点を発見し、すぐにプレーに活かせます
-        </p>
-    </div>
-</div>
-</section>
-
-<section id="review" class="review">
-<h3 class="review_title">
-    実際に使ってみて
-</h3>
-<div class="uk-panel">
-    <img class="uk-align-left uk-margin-remove-adjacent" src="images/light.jpg" width="225" height="150" alt="Example image">
-    <p class="review_name">
-        鈴木 真緒選手（ドラコンプロ）
-    </p>
-    <p class="review_comment">
-        大会前の練習で使ってみて、本当に驚きました！重心の移動を可視化できるインソールは、普段気づかなかった体幹のクセを教えてくれました。速度計測器はクラブスピード以外にもミート率が一目でわかるので、効率よく改善点が見つけられます。データを見ながら練習すると、自分がどこを直せばいいかがすごくクリアになるので、大会に向けた準備がしやすくなりました。これからも活用していきたいと思います！
-    </p>
-</div>
-</section>
-
 <section id="detail" class="detail">
 <div class="detail_title">
     DETAILS
