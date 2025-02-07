@@ -7,8 +7,10 @@ all
 .all{
     color: #fff;
     background-color: #110F1B;
+    width: 100vw;
     font-family: sans-serif;
     font-size: 18px;
+    margin: 0;
 }
 h1{
     color: #fff;
@@ -161,13 +163,12 @@ h3{
   100% { transform: translateX(-100%)}
 }
 
-/* <!-- ペンタゴンの形のカード入れたい --> */
+/* <!-- hexagon card --> */
 .solution_card{
     display: flex;
     justify-content: center;
 }
-/* カード1 */
-.hexagon1{
+.hexagon1, .hexagon2, .hexagon3{
     position: relative;
     width: 400px;
     height: 464px;
@@ -181,8 +182,8 @@ h3{
     align-items: center;
     text-align: center;
     color: #110F1B;
-    margin: 0 -1vw;
     z-index: 2;
+    margin: 0 -1vw;
 }
 /* .hexagon1::before {
     content: "";
@@ -207,82 +208,14 @@ h3{
     font-weight: bold;
 
 } */
-.solution_card_content1{
+.solution_card_content1, .solution_card_content2, .solution_card_content3{
     text-align: center;
     justify-content: center;
     align-items: center;
     margin: 1vh 4vw 1vh 2vw;
     z-index: 1;
 }
-.solution_card_content1_title{
-    color: #110F1B;
-}
-/* カード2 */
-.hexagon2{
-    position: relative;
-    width: 400px;
-    height: 464px;
-    background: linear-gradient(20deg, rgba(168, 163, 184, 0.9) 0%, rgba(204, 219, 233, 0.9) 50%);
-    -webkit-background-clip: content-box;
-    /* -webkit-text-fill-color: transparent; */
-    /* background-color: rgba(168,188,218,0.4); */
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #110F1B;
-    margin: 0 -1vw;
-    z-index: 2;
-}
-/* .hexagon-card .solution_number{
-    position: absolute;
-    z-index: 2;
-    transform: scale(1.5);
-
-} */
-.solution_card_content2{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 1vh 4vw 1vh 2vw;
-    z-index: 1;
-}
-.solution_card_content2_title{
-    color: #110F1B;
-}
-/* カード3 */
-.hexagon3{
-    position: relative;
-    width: 400px;
-    height: 464px;
-    background: linear-gradient(20deg, rgba(168, 163, 184, 0.9) 0%, rgba(204, 219, 233, 0.9) 50%);
-    -webkit-background-clip: content-box;
-    /* -webkit-text-fill-color: transparent; */
-    /* background-color: rgba(168,188,218,0.4); */
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #110F1B;
-    margin: 0 -1vw;
-    z-index: 2;
-}
-/* .hexagon-card .solution_number{
-    position: absolute;
-    z-index: 2;
-    transform: scale(1.5);
-
-} */
-.solution_card_content3{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 1vh 4vw 1vh 2vw;
-    z-index: 1;
-}
-.solution_card_content3_title{
+.solution_card_content1_title, .solution_card_content2_title ,.solution_card_content3_title{
     color: #110F1B;
 }
 .solution_box{
@@ -315,116 +248,328 @@ PRODUCT
     transform: skewX(-15deg);
     margin: -8vh 0 0 6vw;
 }
-.矢印のところ（後で編集）{}
-.products_subtitle{}
-.products_text{}
+/* <!-- カード３つ、斜線区切り --> */
+.product_card{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 72vh;
+    background: linear-gradient(20deg, rgba(168, 163, 184, 0.9) 0%, rgba(204, 219, 233, 0.9) 50%);
+    color: #110F1B;
+    margin-top: -6vh;
+}
+.product_card_content1, .product_card_content2, .product_card_content3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 33vw;
+    position: relative;
+    margin: 0 2vw 8vh 2vw;
+}
+/* .product_card_content1{} */
+.product_card_content2{
+    margin-left: 6vw;
+}
+.product_card_content3{
+    margin-left: 6vw;
+}
+.product_insolyis_logo, .product_lyzer_logo, .product_tracker_logo{
+    width: 16vw;
+    height: auto;
+    margin: 10vh 0 2vh;
+}
+.product_insolyis_Img, .product_lyzer_Img, .product_tracker_Img{
+    width: 16vw;
+    height: auto;
+    margin: 2vh 0;
+}
+.product_insolyis_text, .product_lyzer_text ,.product_tracker_text{
+    margin-bottom: 2vh;
+}
+.product_description_button{
+    position: absolute;
+    bottom: -2vh; /* 斜め区切りに沿うように調整 */
+    transform: skewX(-5deg);
+    right: -2.3vw;
+    background: linear-gradient(90deg, rgba(17, 15, 27, 1) 50%, rgba(24, 110, 163, 1) 100%);
+    color: white;
+    padding: 1vh 2vw;
+    font-weight: bold;
+}
+.product_description_button:hover {
+    background: #110F1B;
+    cursor: pointer;
+}
+/* 斜めの分割線 */
+.product_card_content1::after,
+.product_card_content2::after {
+    content: "";
+    position: absolute;
+    top: 1.6vh;
+    right: -4vw;
+    width: 2px;
+    height: 70.4vh;
+    background-color: #292e54;
+    transform: skewX(-5deg); /* 斜めに傾ける */
+}
+/* 最後のカードには分割線をつけない */
+.product_card_content3:last-child::after {
+    display: none;
+}
+
+/* 組み合わせることで多機能 */
+.next{
+    width: 100vw;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ /* 三角形 */
+.product_triangle{
+    width: 30vw;
+    height: 22vh;
+    background: linear-gradient(to bottom, rgba(24, 110, 163, 1), rgba(17, 15, 27, 1));
+    clip-path: polygon(50% 100%, 100% 0, 0 0); /* 下向き三角形 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.product_subtitle{
+    font-size: 36px;
+    background: linear-gradient(0deg, #ffffff 20%, #378BDB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 2vh 0 2vh 0;
+    position: relative;
+    z-index: 2; /* 三角形の上に配置 */
+}
+.product_subtitle::after {
+    position: absolute;
+    content: "";
+    background-color: #186EA3;
+    width: 60vw;
+    height: 6px; 
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.product_text{
+    font-size: 22px;
+    text-align: center;
+    padding: 2vh 0 2vh 0;
+    position: relative;
+    z-index: 2; /* 三角形の上に配置 */
+}
+
+
+/* FEATURE */
+#feature{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.feature{}
+.feature_title{
+    text-align: center;
+    margin: 0 0 4vh 0;
+}
+
+/* Feature tab */
+.tab_wrap{
+    width: 80vw;
+	box-shadow: 0 0 5px rgba(0,0,0,.1);
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	padding: 0 0 20px;
+    margin: auto;
+}
+.tab_label{
+    color: #186EA3;
+	cursor: pointer;
+    display: flex;
+    flex-direction: column;
+	flex: 1;
+	order: -1;
+	padding: 12px 24px;
+	position: relative;
+	text-align: center;
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
+	user-select: none;
+	white-space: nowrap;
+	-webkit-tap-highlight-color: transparent;
+}
+.tab_label:hover {
+	background: rgba(0, 191, 255,.1);
+}
+.tab_switch:checked + .tab_label {
+	color: #ffffff;
+}
+.tab_label::after {
+	background: #ffffff;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 3px;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transform: translateX(100%);
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s 80ms;
+	width: 100%;
+	z-index: 1;
+}
+.tab_switch:checked ~ .tab_label::after {
+	transform: translateX(-100%);
+}
+.tab_switch:checked + .tab_label::after {
+	opacity: 1;
+	transform: translateX(0);
+}
+.tab_switch:checked ~ .tab_content {
+	transform: translateX(30%);
+}
+.tab_switch:checked + .tab_label + .tab_content {
+	height: auto;
+	opacity: 1;
+	order: 1;
+	pointer-events:auto;
+	transform: translateX(0);
+}
+.tab_wrap::after {
+	content: '';
+	height: 20px;
+	order: -1;
+	width: 100%;
+}
+.tab_switch {
+	display: none;
+}
+.tab_icon {
+    width: 6vw;
+    height: auto;
+    padding-bottom: 1vh;
+    margin: auto;
+    filter: brightness(0) saturate(100%) invert(21%) sepia(88%) saturate(464%) hue-rotate(180deg) brightness(89%) contrast(96%);
+    transition: filter 0.3s ease-in-out;
+}
+.tab_switch:checked + .tab_label .tab_icon {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+/* Feature card */
+.tab_content {
+    width: 90vw;
+	height:0;
+	opacity:0;
+	/* pointer-events:none; */
+	/* transform: translateX(-30%); */
+	/* transition: transform .3s 80ms, opacity .3s 80ms; */
+	/* width: 100%; */
+}
+.feature_card {
+    position: relative;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 上部分の画像エリア */
+.feature_card_img {
+    position: relative;
+    width: 80vw;
+    height: 40vh;
+    overflow: hidden;
+    top: 0;
+}
+
+/* 商品画像（分割を跨ぐように） */
+.feature_card_img img {
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    top: 0;
+    left: 0;
+    bottom: -30px;
+    object-fit: contain;
+}
+
+/* 下部分（白いエリア） */
+.feature_card_text {
+    width: 80vw;
+    height: 40vh;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル */
+.feature_card_title {
+    color: #110F1B;
+    padding: 4vh 10vw 2vh 30vw;
+}
+
+/* 説明テキスト */
+.feature_card_desc {
+    color: #110F1B;
+    padding: 0vh 10vw 2vh 30vw;
+}
+/* 
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.indicator-dot.active {
+    background-color: #186EA3;
+} */
 
 
 /* 
-<section id="feature" class="feature">
-<h1 class="feature_title">
-    機能紹介
-</h1>
-<ul uk-tab class="feature_tab">
-    <li class="uk-active">
-        <img src="" class="app_icon">
-        <a href="#">アプリ連携</a>
-    </li>
-    <li class="uk-active">
-        <img src="" class="shot_icon">
-        <a href="#">履歴・分析機能</a>
-    </li>
-    <li class="uk-active">
-        <img src="" class="cop_icon">
-        <a href="#">CoP測定</a>
-    </li>
-    <li class="uk-active">
-        <img src="" class="speed_icon">
-        <a href="#">スピード計測</a>
-    </li>
-    <li class="uk-active">
-        <img src="" class="tracker_icon">
-        <a href="#">クラブ識別</a>
-    </li>
-</ul>
-<div class="feature_background_text">
-    Feature<br/>
-    Introduction
-</div>
-<div class="feature_carousel">
-    <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="feature_app">
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top">
-                    <img src="images/light.jpg" width="1800" height="1200" alt="">
-                    <img src="" class="feature_app_content">
-                </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                    <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="feature_synergy">
-            <div class="uk-card uk-card-default">
-                 <div class="uk-card-media-top">
-                    <img src="images/light.jpg" width="1800" height="1200" alt="">
-                    <img src="" class="feature_synergy_content">
-                </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                    <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="feature_lyzer">
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top">
-                    <img src="images/light.jpg" width="1800" height="1200" alt="">
-                    <img src="" class="feature_lyzer_conten">
-                </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                    <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="feature_insolyis">
-            <div class="uk-card uk-card-default">
-                 <div class="uk-card-media-top">
-                    <img src="images/light.jpg" width="1800" height="1200" alt="">
-                    <img src="" class="feature_insolyis_content">
-                </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                    <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="feature_tracker">
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top">
-                    <img src="images/light.jpg" width="1800" height="1200" alt="">
-                    <img src="" class="feature_tracker_content">
-                </div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                    <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
+.feature_tab{}
+.app_icon, .shot_icon, .cop_icon, .speed_icon, .tracker_icon{
 
+}
+.feature_background_text{}
+.feature_carousel{}
+.feature_app, .feature_synergy, .feature_lyzer, .feature_insolyis, .feature_tracker{
+
+}
+.uk-card uk-card-default{}
+.uk-card-media-top{}
+.feature_app_content, .feature_synergy_content, .feature_lyzer_conten, .feature_insolyis_content, .feature_tracker_content{
+
+}
+.uk-card-body{}
+.uk-card-title{}
+.uk-child-width-1-2@m{} */
+
+
+
+/*
 <section id="situation" class="situation">
 <div class="situation_section_title">
     Situation
