@@ -168,7 +168,17 @@ h3{
     display: flex;
     justify-content: center;
 }
-.hexagon1, .hexagon2, .hexagon3{
+.solution_content{}
+.solution_number{
+    position: relative;
+    font-size: 96px;
+    transform: skewX(-15deg);
+    color: #378BDB;
+    text-align: center;
+    margin-top: -6vh;
+    z-index: 3;
+}
+.hexagon{
     position: relative;
     width: 400px;
     height: 464px;
@@ -183,7 +193,7 @@ h3{
     text-align: center;
     color: #110F1B;
     z-index: 2;
-    margin: 0 -1vw;
+    margin: -4vh -1vw 1vh -1vw;
 }
 /* .hexagon1::before {
     content: "";
@@ -196,33 +206,21 @@ h3{
     left: 0;
     box-sizing: border-box;
 } */
-/* .solution_number1{
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: red;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-
-} */
-.solution_card_content1, .solution_card_content2, .solution_card_content3{
+.solution_card_content{
     text-align: center;
     justify-content: center;
     align-items: center;
     margin: 1vh 4vw 1vh 2vw;
     z-index: 1;
 }
-.solution_card_content1_title, .solution_card_content2_title ,.solution_card_content3_title{
+.solution_card_content_title{
     color: #110F1B;
 }
 .solution_box{
     position: absolute;
     width: 84vw;
-    height: 24vh;
-    margin-top: -11vh;
+    height: 18vh;
+    margin-top: -6.6vh;
     background: linear-gradient(270deg, rgba(17, 15, 27, 1) 50%, rgba(24, 110, 163, 1) 100%);
     z-index: 1;
 }
@@ -237,8 +235,8 @@ PRODUCT
 .products{}
 .product_background_Img{
     position: relative;
-    width: 100vw;
-    height: 40vh;
+    width: 100%;
+    height: 28vh;
     object-fit: cover;
 }
 .products_section_title{
@@ -246,19 +244,19 @@ PRODUCT
     font-weight: lighter;
     color: #ffffff;
     transform: skewX(-15deg);
-    margin: -8vh 0 0 6vw;
+    margin: -4vh 0 0 6vw;
 }
 /* <!-- カード３つ、斜線区切り --> */
 .product_card{
     display: flex;
     justify-content: space-around;
     width: 100vw;
-    height: 72vh;
+    height: 50vh;
     background: linear-gradient(20deg, rgba(168, 163, 184, 0.9) 0%, rgba(204, 219, 233, 0.9) 50%);
     color: #110F1B;
     margin-top: -6vh;
 }
-.product_card_content1, .product_card_content2, .product_card_content3{
+.product_card_content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,13 +265,7 @@ PRODUCT
     position: relative;
     margin: 0 2vw 8vh 2vw;
 }
-/* .product_card_content1{} */
-.product_card_content2{
-    margin-left: 6vw;
-}
-.product_card_content3{
-    margin-left: 6vw;
-}
+
 .product_insolyis_logo, .product_lyzer_logo, .product_tracker_logo{
     width: 16vw;
     height: auto;
@@ -288,50 +280,31 @@ PRODUCT
     margin-bottom: 2vh;
 }
 .product_description_button{
-    position: absolute;
-    bottom: -2vh; /* 斜め区切りに沿うように調整 */
-    transform: skewX(-5deg);
-    right: -2.3vw;
     background: linear-gradient(90deg, rgba(17, 15, 27, 1) 50%, rgba(24, 110, 163, 1) 100%);
     color: white;
     padding: 1vh 2vw;
     font-weight: bold;
+    text-align: center;
 }
 .product_description_button:hover {
     background: #110F1B;
     cursor: pointer;
 }
-/* 斜めの分割線 */
-.product_card_content1::after,
-.product_card_content2::after {
-    content: "";
-    position: absolute;
-    top: 1.6vh;
-    right: -4vw;
-    width: 2px;
-    height: 70.4vh;
-    background-color: #292e54;
-    transform: skewX(-5deg); /* 斜めに傾ける */
-}
-/* 最後のカードには分割線をつけない */
-.product_card_content3:last-child::after {
-    display: none;
-}
-
 /* 組み合わせることで多機能 */
 .next{
     width: 100vw;
-    height: 40vh;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2vh;
 }
  /* 三角形 */
 .product_triangle{
     width: 30vw;
-    height: 22vh;
+    height: 240px;
     background: linear-gradient(to bottom, rgba(24, 110, 163, 1), rgba(17, 15, 27, 1));
     clip-path: polygon(50% 100%, 100% 0, 0 0); /* 下向き三角形 */
     position: absolute;
@@ -373,7 +346,7 @@ PRODUCT
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 .feature{}
 .feature_title{
@@ -476,7 +449,8 @@ PRODUCT
 }
 .feature_card {
     position: relative;
-    height: 70vh;
+    width: 80vw;
+    height: 64vh;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -486,8 +460,10 @@ PRODUCT
 /* 上部分の画像エリア */
 .feature_card_img {
     position: relative;
-    width: 80vw;
-    height: 40vh;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     top: 0;
 }
@@ -495,18 +471,19 @@ PRODUCT
 /* 商品画像（分割を跨ぐように） */
 .feature_card_img img {
     position: absolute;
-    width: 80vw;
-    height: auto;
+    width: auto;
+    height: 100%;
+    max-height: 50vh;
     top: 0;
     left: 0;
     bottom: -30px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* 下部分（白いエリア） */
 .feature_card_text {
     width: 80vw;
-    height: 40vh;
+    height: 38vh;
     background: white;
     align-items: center;
     justify-content: center;
@@ -525,76 +502,31 @@ PRODUCT
     color: #110F1B;
     padding: 0vh 10vw 2vh 30vw;
 }
-/* 
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.indicator-dot {
-    width: 10px;
-    height: 10px;
-    background-color: gray;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-.indicator-dot.active {
-    background-color: #186EA3;
-} */
-
-
-/* 
-.feature_tab{}
-.app_icon, .shot_icon, .cop_icon, .speed_icon, .tracker_icon{
-
-}
-.feature_background_text{}
-.feature_carousel{}
-.feature_app, .feature_synergy, .feature_lyzer, .feature_insolyis, .feature_tracker{
-
-}
-.uk-card uk-card-default{}
-.uk-card-media-top{}
-.feature_app_content, .feature_synergy_content, .feature_lyzer_conten, .feature_insolyis_content, .feature_tracker_content{
-
-}
-.uk-card-body{}
-.uk-card-title{}
-.uk-child-width-1-2@m{} */
-
 
 /* SITUATION */
 #situation{
     background-color: #ffffff;
     width: 100vw;
     height: auto;
-    max-height: 100vh;
-    min-height: 80vh;
 }
 .situation{}
 .situation_section_title{
-    font-size: 6vw;
+    font-size: 96px;
     font-weight: lighter;
     color: #378BDB;
     transform: skewX(-15deg);
     text-align: right;
-    margin: 0 0 -4vh 6vw;
+    margin: 0 2vw -50px;
 
 }
 .situation_title{
-    font-size: 36px;
+    font-size: clamp(16px, 2vw, 40px);
     background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     letter-spacing: 0.2em;
-    padding: 10vh 0 1vh 0;
+    padding: 8vh 0 1vh 0;
     position: relative;
 }
 .situation_title::after {
@@ -609,64 +541,64 @@ PRODUCT
   }
 .situation_subtitle{
     text-align: center;
-    margin: 1vh 0 8vh;
+    margin: 1vh 0 4vh;
     color: #110F1B;
 }
-.situation_Img{
-    /* position: relative;
-    width: 100vw;
-    height: auto;
-    min-height: 100vh;
+.situation_Img_section{
     position: relative;
+    width: auto;
+    height: auto;
     background-image: url("./assets/situation/situation.png");
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: contain; */
+    background-size: cover;
 
 }
-.situation_content_Img{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /* height: auto;
-    min-height: 50vh; */
-    object-fit: contain;
-    z-index: 1;
-}
-.text_overlay{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-    z-index: 10;
-}
-.situation_1, .situation_3{
+.situation_1{
     align-self: flex-start;
+    margin: 0 6vw clamp(1px, 12vh, 1000px) 6vw;
+    padding-top: clamp(10px, 6vw, 40px);
+    font-size: clamp(14px, 1.25vw, 22px);
     color: #fff;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
 }
 .situation_2{
     align-self: flex-end;
     color: #fff;
-    margin: 0!important;
-    padding: 0!important;
+    margin: clamp(1px, 12vh, 1000px) 6vw;
+    font-size: clamp(14px, 1.25vw, 22px);
 }
-
+.situation_3{
+    align-self: flex-start;
+    color: #fff;
+    padding: 0 0 clamp(10px, 6vw, 40px) 0;
+    margin: clamp(1px, 12vh, 1000px) 6vw 0 6vw;
+    font-size: clamp(14px, 1.25vw, 22px);
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+}
+.situation_content_title{
+    font-size: clamp(18px, 1.67vw, 30px);      
+}
 
 /* REVIEW */
 #review{
     background-color: #fff;
+    padding: 2vh;
 }
 .review{}
 .review_triangle{
-    width: 10w;
-    height: 20vh;
+    width:0;
+    height:0;
     border-style:solid;
-    border-width: 0 100px 100px 100px;
-    position: absolute;
+    border-width: 0 100px 200px 100px;
+    border-color: transparent transparent #FFFFFF transparent;
+    margin: -10vh 0 0 6vw;
+    position: relative;
+    z-index: 2;
 }
 .review_title{
     background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
@@ -674,9 +606,10 @@ PRODUCT
     -webkit-text-fill-color: transparent;
     text-align: center;
     letter-spacing: 0.2em;
+    margin: 0;
 }
 .uk-panel{
-    padding: 6vw 6vh;
+    padding: 2vw 2vh;
     align-items: center;
     justify-content: center;
 }
@@ -692,143 +625,128 @@ PRODUCT
 }
 
 
-/*
-<section id="detail" class="detail">
-<div class="detail_title">
-    DETAILS
-</div>
-<div class="detail_subtitle">
-    商品詳細
-</div>
-<div class="detail_card">
-    <ul class="detail_card_insolyis">
-        <li>
-            <img src="" class="detail_card_insolyis_logo">
-            <img src="" class="detail_card_insolyis_content">
-            <p>
-                ¥XX,XXX- (税込)
-            </p>
-            <button class="detail_button">
-                商品を購入する
-            </button>
-            <table border="1">
-                <tr>
-                  <th>寸法</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>重量</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>ディスプレイ</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>バッテリー</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>防水</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>使用可能時間</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>データ更新方法</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>付属品</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>ここは情報を</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-              </table>
-        </li>
-    </ul>
-    <ul class="detail_card_lyzer">
-        <li>
-            <img src="" class="detail_card_lyzer_logo">
-            <img src="" class="detail_card_lyzer_content">
-            <p>
-                ¥XX,XXX- (税込)
-            </p>
-            <button class="detail_button">
-                商品を購入する
-            </button>
-            <table border="1">
-                <tr>
-                  <th>寸法</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>重量</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>ディスプレイ</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>バッテリー</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>防水</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>使用可能時間</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>データ更新方法</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>付属品</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>ここは情報を</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-              </table>
-        </li>
-    </ul>
-    <ul class="detail_card_tracker">
-        <li>
-            <img src="" class="detail_card_tracker_logo">
-            <img src="" class="detail_card_tracker_content">
-            <p>
-                ¥XX,XXX- (税込)
-            </p>
-            <button class="detail_button">
-                商品を購入する
-            </button>
-            <table border="1">
-                <tr>
-                  <th>寸法</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>重量</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>ディスプレイ</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>バッテリー</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>防水</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>使用可能時間</th><td>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>データ更新方法</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>付属品</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-                <tr>
-                  <th>ここは情報を</th><td>XXXXXXXXXXXX<br/>XXXXXXXXXXXX</td>
-                </tr>
-              </table>
-        </li>
-    </ul>
-</div>
-</section>
+/* DETAIL */
+#detail{
+    background-color: #E5E9EF;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 2vh;
+}
+.detail{}
+.detail_title{
+    font-size: clamp(16px, 2vw, 40px);
+    background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 4vh 0 1vh 0;
+    position: relative;
+    font-weight: bold;
 
-<section id="FAQ" class="FAQ">
-<div class="FAQ_title">
+}
+.detail_title::after {
+    position: absolute;
+    content: "";
+    background-color: #186EA3;
+    width: 20vw;
+    height: 6px; 
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.detail_subtitle{
+    text-align: center;
+    margin: 1vh 0 4vh;
+    color: #110F1B;
+}
+
+.detail_card{
+    display: flex;
+    width: 98vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 1vw 2vh 1vw;
+    border-radius: 2vw;
+    gap: 1vw;
+}
+.detail_card p{
+    color: #110F1B;
+    font-weight: bold;
+    font-size: 20px;
+}
+table{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.detail_card_item{
+    width: 24vw;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3vh 2vw;
+    border-radius: 2vw;
+    margin: 0;
+}
+.detail_card_logo{
+    height: auto;
+    width: auto;
+    padding: 0 2vw;
+    align-items: center;
+}
+.detail_card_product{
+    padding: 3vh 2vw 2vh 2vw;
+    width: auto;
+    height: auto;
+}
+.detail_button{
+    background: linear-gradient(90deg, rgba(24, 110, 163, 1) 50%, rgba(229, 233, 239, 1) 100%);
+    color: white;
+    padding: 1vh 3vw;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6vw;
+    margin-bottom: 2vw;
+}
+.detail_button:hover {
+    background: #378BDB;
+    cursor: pointer;
+}
+.detail_card_item table{
+    display: block;
+    max-width: 100%;
+    border-collapse: collapse;
+    color: #110F1B;
+    overflow-x: auto;
+}
+.table_wapper{
+    display: block;
+    overflow-x: auto; 
+}
+.detail_card_item th{
+    width: 12vw;
+    padding: 0 1vw;
+    white-space: nowrap;
+
+}
+.detail_card_item td{
+    text-align: left;
+    width: 12vw;
+    padding: 0 1vw;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/*
+<section id="FAQ" .FAQ{}
+class="FAQ_title{}
     よくある質問
 </div>
 <div class="FAQ_subtitle">
