@@ -1,44 +1,50 @@
 @charset "utf-8" ;
 
-
+* {
+    outline: 1px solid red;
+}
 /* 
 all
 */
 .all{
     color: #fff;
     background-color: #110F1B;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: calc(16px + (20 - 16) * ((100vw - 375px) / (1920 - 375)));
     margin: 0;
+    padding: 0;
 }
 h1{
     color: #fff;
     font-weight: bold;
-    font-size: 36px;
+    font-size: calc(22px + (42 - 22) * ((100vw - 375px) / (1920 - 375)));
 }
 h2{
     color: #fff;
     font-weight: 200;
-    font-size: 28px;
+    font-size: calc(20px + (22 - 20) * ((100vw - 375px) / (1920 - 375)));
 }
 h3{
     color: #fff;
     font-weight: lighter;
-    font-size: 24px;
+    font-size: calc(16px + (24 - 16) * ((100vw - 375px) / (1920 - 375)));
 }
 
 
 
 /* TOP */
 
+
+
 /* CONCEPT */
-#concept{}
-.concept{
+#concept{
+    max-width: 100%;
     margin: 6vh 14vw;
 }
 .concept_title{
-    font-size: 3.6em;
+    font-size: calc(27px + (64 - 27) * ((100vw - 375px) / (1920 - 375)));
     background: linear-gradient(180deg, #ffffff 0%, #8BB6D1 40%, #186EA3 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -47,35 +53,56 @@ h3{
     text-align: right;
 }
 .concept_title1{
-    margin-right: 280px;
-}
-.concept_title2{
+    margin-right:  calc(200px + (280 - 200) * ((100vw - 1150px) / (1920 - 1150)));
 }
 .concept_section_title{
-    font-size: 36px;
+    font-size: calc(28px + (36 - 28) * ((100vw - 375px) / (1920 - 375)));
     color:#fff;
     transform: skewX(-15deg);
     font-weight: 500;
 }
 .cocept_text{
-    font-size: 22px;
+    font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1920 - 375)));
     color:#fff;
     margin: 2vh 10vw 2vh 0;
     font-weight: 100;
 }
+@media (max-width: 1150px) and (min-width: 769px) {
+    .concept_title{
+        text-align: center;
+    }
+    .concept_title1{
+        margin-right: 0;
+    }
+    .cocept_text{
+        margin: 2vh 0;
+    } 
+}
+@media (max-width: 768px) and (min-width: 375px) {
+    .concept_title{
+        text-align: center;
+    }
+    .concept_title1{
+        margin-right: 0;
+    }
+    .cocept_text{
+        font-size: 18px;
+        margin-right: 0;
+    } 
+}
 
 /* SYNERGY */
 #synergy{
+    max-width: 100%;
     margin: 12vh 6vw;
 }
-.synergy{}
 .synergy_section_title{
-    font-size: 6vw;
+    font-size: calc(42px + (120 - 42) * ((100vw - 375px) / (1920 - 375)));
     font-weight: lighter;
     color: #378BDB;
     transform: skewX(-15deg);
     text-align: right;
-    margin-bottom: -4vh;
+    margin-bottom: -50px;
 }
 .synergy_section{
     display: flex;
@@ -86,9 +113,13 @@ h3{
 }
 .synergy_description_title{
     color: #fff;
-    font-size: 28px;
     letter-spacing: 0.6em;
     font-weight: 500; 
+    font-size: calc(20px + (32 - 20) * ((100vw - 375px) / (1920 - 375)));
+}
+.synergy_description_subtitle{
+    font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1920 - 375)));
+    margin-bottom: 4vw;
 }
 .synergy_Img_section{
     margin: 0;
@@ -104,20 +135,115 @@ h3{
 }
 .synergy_summary{
     text-align: center;
-    font-size: 22px;
+    font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1920 - 375)));
     font-weight: 200;
     margin-top: 6vh;
     letter-spacing: 0.6em;
+}
+@media (max-width: 1150px) and (min-width: 769px) {
+    #synergy{
+        max-width: 100%;
+        margin: 8vh 6vw;
+    }
+    .synergy_section{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .synergy_description{
+        text-align: center;
+        margin: 8vw 0 0 0;
+        width: 100%;
+    }
+    .synergy_description_title{
+        letter-spacing: 0;
+        font-weight: bold; 
+        text-align: center;
+        margin-bottom: 2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .synergy_description_subtitle{
+        margin-bottom: 6vw;
+    }
+    .synergy_content{
+        display: flex;
+        gap: 4vw;
+        margin: 0;
+    }
+    .synergy_Img{
+        content: url("./assets/situation/situation.png"); 
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        object-fit: contain;
+    }
+    .synergy_summary{
+        letter-spacing: 0.4em;
+        margin: 4vw 0 0 0;
+    }
+}
+@media (max-width: 768px) and (min-width: 375px) {
+    #synergy{
+        max-width: 100%;
+        margin: 90px 6vw 120px 6vw;
+    }
+    .synergy_section_title{
+        margin-bottom: -30px;
+    }
+    .synergy_section{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .synergy_description{
+        text-align: center;
+        margin: 6vh 0 0 0;
+        width: 100%;
+    }
+    .synergy_description_title{
+        letter-spacing: 0.2rem;
+        font-weight: bold; 
+        text-align: center;
+        margin-bottom: 2vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .synergy_description_subtitle{
+        margin-bottom: 40px;
+    }
+    .synergy_content{
+        gap: 4vh;
+        margin: 0;
+        font-size: 16px;
+    }
+    .synergy_content h3{
+        font-size: 16px;
+    }
+    .synergy_content p{
+        margin-bottom: 30px;
+    }
+    
+    .synergy_Img{
+        content: url("./assets/situation/situation.png"); 
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        object-fit: contain;
+    }
+    .synergy_summary{
+        letter-spacing: 0.02rem;
+        margin: 4vw 0;
+    }
 }
 
 
 /* SOLUTION */
 #solution{
+    max-width: 100%;
     background-color: #E5E9EF;
     color: #110F1B;
     overflow: hidden;
 }
-.solution{}
 .IoB_text{
     display: inline-block;
     color:#E5E9EF;
@@ -129,18 +255,17 @@ h3{
     padding-left: 100%;
     white-space : nowrap;
     line-height : 1em;
-    font-size: 220px;
+    font-size: calc(102px + (260 - 102) * ((100vw - 375px) / (1920 - 375)));
     overflow: hidden;
     animation   : scrollAnime 30s linear infinite;
 }
 .solution_title{
-    font-size: 36px;
     background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     letter-spacing: 0.2em;
-    margin-top: -16vh;
+    margin-top: calc(-80px + (-230 - 80) * ((100vw - 375px) / (1920 - 375)));
     padding: 12vh 0 2vh 0;
     position: relative;
 }
@@ -155,6 +280,7 @@ h3{
     transform: translateX(-50%);
   }
 .solution_subtitle{
+    font-size: calc(16px + (24 - 16) * ((100vw - 375px) / (1920 - 375)));
     text-align: center;
     margin-bottom: 8vh;
 }
@@ -168,24 +294,22 @@ h3{
     display: flex;
     justify-content: center;
 }
-.solution_content{}
+/* .solution_content{} */
 .solution_number{
     position: relative;
-    font-size: 96px;
+    font-size: calc(58px + (100 - 58) * ((100vw - 375px) / (1920 - 375)));
     transform: skewX(-15deg);
     color: #378BDB;
     text-align: center;
-    margin-top: -6vh;
+    margin-top:  calc(-6vh + (10 - 6) * ((100vw - 375px) / (1920 - 375)));;
     z-index: 3;
 }
 .hexagon{
     position: relative;
-    width: 400px;
-    height: 464px;
+    width: calc(220px + (500 - 220) * ((100vw - 375px) / (1920 - 375)));
+    height: calc(260px + (580 - 260) * ((100vw - 375px) / (1920 - 375)));
     background: linear-gradient(20deg, rgba(168, 163, 184, 0.9) 0%, rgba(204, 219, 233, 0.9) 50%);
     -webkit-background-clip: content-box;
-    /* -webkit-text-fill-color: transparent; */
-    /* background-color: rgba(168,188,218,0.4); */
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     justify-content: center;
@@ -193,7 +317,8 @@ h3{
     text-align: center;
     color: #110F1B;
     z-index: 2;
-    margin: -4vh -1vw 1vh -1vw;
+    margin: -80px -1vw 1vh -1vw;
+    margin-top:  calc(-40px + (10 - 40) * ((100vw - 375px) / (1920 - 375)));;
 }
 /* .hexagon1::before {
     content: "";
@@ -213,17 +338,48 @@ h3{
     margin: 1vh 4vw 1vh 2vw;
     z-index: 1;
 }
+.solution_card_content p{
+    font-size: calc(14px + (22 - 14) * ((100vw - 375px) / (1920 - 375)));
+}
 .solution_card_content_title{
     color: #110F1B;
+    font-size: calc(16px + (24 - 16) * ((100vw - 375px) / (1920 - 375)));
 }
 .solution_box{
     position: absolute;
-    width: 84vw;
-    height: 18vh;
-    margin-top: -6.6vh;
+    width: calc(315px + (1600 - 315) * ((100vw - 375px) / (1920 - 375)));
+    height: calc(300px + (310 - 300) * ((100vw - 375px) / (1920 - 375)));
+    margin-top: calc(-60px + (0 - 60) * ((100vw - 375px) / (1920 - 1150)));
     background: linear-gradient(270deg, rgba(17, 15, 27, 1) 50%, rgba(24, 110, 163, 1) 100%);
     z-index: 1;
 }
+
+@media (max-width: 1150px) and (min-width: 769px){
+    .IoB_text{
+        margin-top: -1vh;
+    }
+    .solution_title{
+        margin: -12vh 6vw 0 6vw;
+        padding-bottom: 1vh;
+    }
+    .solution_subtitle{
+        margin: 2vw 6vw 8vh 6vw;
+    }
+
+}    
+@media (max-width: 768px) and (min-width: 375px){
+    .IoB_text{
+        margin-top: -20px;
+    }
+    .solution_title{
+        margin: -12vh 6vw 0 6vw;
+        padding-bottom: 20px;
+    }
+    .solution_subtitle{
+        margin: 2vw 6vw 8vh 6vw;
+    }
+
+}   
 
 
 
@@ -231,30 +387,33 @@ h3{
 PRODUCT
  */
 #products{
+    max-width: 100%;
+    height: auto;
 }
-.products{}
 .product_background_Img{
     position: relative;
     width: 100%;
-    height: 28vh;
+    height: calc(375px + (500 - 375) * ((100vw - 375px) / (1920 - 375)));
     object-fit: cover;
 }
 .products_section_title{
-    font-size: 6vw;
+    width: 80%;
+    font-size: calc(42px + (120 - 42) * ((100vw - 375px) / (1920 - 375)));
     font-weight: lighter;
     color: #ffffff;
     transform: skewX(-15deg);
-    margin: -4vh 0 0 6vw;
+    margin: calc(-40px + (-40 - 40) * ((100vw - 375px) / (1920 - 375)));
+    margin-left: 6vw;
 }
 /* <!-- カード３つ、斜線区切り --> */
 .product_card{
     display: flex;
     justify-content: space-around;
     width: 100vw;
-    height: 50vh;
+    height: auto;
     background: linear-gradient(20deg, rgba(168, 163, 184, 0.9) 0%, rgba(204, 219, 233, 0.9) 50%);
     color: #110F1B;
-    margin-top: -6vh;
+    margin-top: calc(-10px + (30 - 10) * ((100vw - 375px) / (1920 - 375)));
 }
 .product_card_content{
     display: flex;
@@ -263,21 +422,23 @@ PRODUCT
     text-align: center;
     width: 33vw;
     position: relative;
-    margin: 0 2vw 8vh 2vw;
+    margin: 0 2vw;
+    margin-bottom: calc(60px + (120 - 60) * ((100vw - 375px) / (1920 - 375)));;
 }
 
 .product_insolyis_logo, .product_lyzer_logo, .product_tracker_logo{
-    width: 16vw;
+    width: calc(150px + (270 - 150) * ((100vw - 375px) / (1920 - 375)));
     height: auto;
-    margin: 10vh 0 2vh;
+    margin-top: calc(70px + (160 - 70) * ((100vw - 375px) / (1920 - 375)));
 }
 .product_insolyis_Img, .product_lyzer_Img, .product_tracker_Img{
-    width: 16vw;
+    width: calc(150px + (300 - 150) * ((100vw - 375px) / (1920 - 375)));
     height: auto;
-    margin: 2vh 0;
+    margin: 4vh 0;
 }
 .product_insolyis_text, .product_lyzer_text ,.product_tracker_text{
-    margin-bottom: 2vh;
+    margin: 0 2vw;
+    margin-bottom: calc(30px + (60 - 30) * ((100vw - 375px) / (1920 - 375)));
 }
 .product_description_button{
     background: linear-gradient(90deg, rgba(17, 15, 27, 1) 50%, rgba(24, 110, 163, 1) 100%);
@@ -290,35 +451,74 @@ PRODUCT
     background: #110F1B;
     cursor: pointer;
 }
+@media (max-width: 768px) and (min-width: 375px){
+    /* <!-- カード３つ、斜線区切り --> */
+    .product_card{
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+    .product_card_content{
+        flex-direction: column;
+        width: auto;
+        /* margin: 0 2vw 6vh 2vw; */
+    }
+    
+    .product_insolyis_logo, .product_lyzer_logo, .product_tracker_logo{
+        position: relative;
+        text-align: right;
+    }
+    .product_insolyis_Img, .product_lyzer_Img, .product_tracker_Img{
+        height: auto;
+        margin: 4vh 0;
+    }
+    .product_insolyis_text, .product_lyzer_text ,.product_tracker_text{
+        margin-bottom: 4vh;
+    }
+    .product_description_button{
+        background: linear-gradient(90deg, rgba(17, 15, 27, 1) 50%, rgba(24, 110, 163, 1) 100%);
+        color: white;
+        padding: 1vh 2vw;
+        font-weight: bold;
+        text-align: center;
+    }
+    .product_description_button:hover {
+        background: #110F1B;
+        cursor: pointer;
+    }
+} 
+
+
 /* 組み合わせることで多機能 */
 .next{
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
     height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2vh;
+    margin: 2vh 0;
 }
  /* 三角形 */
 .product_triangle{
-    width: 30vw;
-    height: 240px;
+    width: calc(50vw + (-200 - 30) * ((100vw - 769px) / (1920 - 769)));
+    height: calc(25vw + (-180 - 25) * ((100vw - 769px) / (1920 - 769)));
     background: linear-gradient(to bottom, rgba(24, 110, 163, 1), rgba(17, 15, 27, 1));
     clip-path: polygon(50% 100%, 100% 0, 0 0); /* 下向き三角形 */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: calc(-100px + (180 - 10) * ((100vw - 769px) / (1920 - 769)));
 }
 .product_subtitle{
-    font-size: 36px;
     background: linear-gradient(0deg, #ffffff 20%, #378BDB 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     letter-spacing: 0.2em;
-    padding: 2vh 0 2vh 0;
+    padding: 2vh 6vw;
     position: relative;
     z-index: 2; /* 三角形の上に配置 */
 }
@@ -333,30 +533,51 @@ PRODUCT
     transform: translateX(-50%);
   }
 .product_text{
-    font-size: 22px;
+    font-size: calc(16px + (24 - 16) * ((100vw - 375px) / (1920 - 375)));
     text-align: center;
-    padding: 2vh 0 2vh 0;
+    padding: 2vh 6vw;
     position: relative;
     z-index: 2; /* 三角形の上に配置 */
 }
-
+@media (max-width: 768px) and (min-width: 375px){
+ /* 三角形 */
+.product_triangle{
+    width: 50vw;
+    height: 25vw;
+    margin-top: calc(-140px + (180 - 10) * ((100vw - 375px) / (768 - 375)));
+}
+.product_subtitle{
+    padding: 3vh 6vw;
+    margin-bottom: 0;
+}
+.product_subtitle::after {
+    width: 80vw;
+    height: 4px; 
+  }
+.product_text{
+    text-align: center;
+    padding: 3vh 6vw;
+}
+}
 
 /* FEATURE */
 #feature{
+    max-width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: calc(80px + (160 - 80) * ((100vw - 375px) / (1920 - 375)));
+    margin-top: calc(40px + (100 - 40) * ((100vw - 375px) / (1920 - 375)));
 }
-.feature{}
 .feature_title{
+    font-size: calc(22px + (38 - 22) * ((100vw - 375px) / (1920 - 375)));
     text-align: center;
-    margin: 0 0 4vh 0;
+    margin: 5vw 0;
 }
-
 /* Feature tab */
 .tab_wrap{
-    width: 80vw;
+    width: calc(337px + (1536 - 337) * ((100vw - 375px) / (1920 - 375)));
+    height: auto;
 	box-shadow: 0 0 5px rgba(0,0,0,.1);
 	display: flex;
 	flex-wrap: wrap;
@@ -437,9 +658,28 @@ PRODUCT
 .tab_switch:checked + .tab_label .tab_icon {
     filter: brightness(0) saturate(100%) invert(100%);
 }
+@media (max-width: 1150px) and (min-width: 769px){
+    .tab_label{
+        padding: 8px 12px;
+    }
+}
+@media (max-width: 768px) and (min-width: 375px){
+    /* .tab_wrap{
+        width: 90vw;
+    } */
+    .tab_label{
+        padding: 8px 2px;
+        font-size: 10px;
+    }
+    .tab_icon {
+        width: 10vw;
+}
+}
+
+
 /* Feature card */
 .tab_content {
-    width: 90vw;
+    width: 100%;
 	height:0;
 	opacity:0;
 	/* pointer-events:none; */
@@ -447,10 +687,11 @@ PRODUCT
 	/* transition: transform .3s 80ms, opacity .3s 80ms; */
 	/* width: 100%; */
 }
+/* カード自体の大きさ */
 .feature_card {
     position: relative;
-    width: 80vw;
-    height: 64vh;
+    width: calc(337px + (1536 - 337) * ((100vw - 375px) / (1920 - 375)));
+    height: calc(600px + (1000 - 600) * ((100vw - 375px) / (1920 - 375)));
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -461,7 +702,7 @@ PRODUCT
 .feature_card_img {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: calc(200px + (1100 - 200) * ((100vw - 375px) / (1920 - 375)));
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -471,37 +712,53 @@ PRODUCT
 /* 商品画像（分割を跨ぐように） */
 .feature_card_img img {
     position: absolute;
-    width: auto;
-    height: 100%;
-    max-height: 50vh;
+    width: 100%;
+    height: auto;
+    max-height: calc(300px + (1000 - 300) * ((100vw - 375px) / (1920 - 375)));
     top: 0;
     left: 0;
-    bottom: -30px;
     object-fit: cover;
+    z-index: 1;
 }
 
 /* 下部分（白いエリア） */
 .feature_card_text {
-    width: 80vw;
-    height: 38vh;
+    width: 100%;
+    height: calc(400px + (660 - 400) * ((100vw - 375px) / (1920 - 375)));
     background: white;
     align-items: center;
     justify-content: center;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
 }
 
 /* タイトル */
 .feature_card_title {
     color: #110F1B;
-    padding: 4vh 10vw 2vh 30vw;
+    padding-top: calc(8px + (50 - 8) * ((100vw - 375px) / (1920 - 375)));
+    padding-right: calc(8px + (50 - 8) * ((100vw - 375px) / (1920 - 375)));
+    padding-bottom: calc(10px + (50 - 10) * ((100vw - 375px) / (1920 - 375)));
+    padding-left: calc(115px + (580 - 115) * ((100vw - 375px) / (1920 - 375)));
+    /* padding: 4vh 10vw 2vh 30vw; */
+    font-size: calc(16px + (24 - 16) * ((100vw - 375px) / (1920 - 375)));
+    margin: 0;
 }
 
 /* 説明テキスト */
 .feature_card_desc {
     color: #110F1B;
-    padding: 0vh 10vw 2vh 30vw;
+    padding-top: calc(8px + (50 - 8) * ((100vw - 375px) / (1920 - 375)));
+    padding-right: calc(8px + (50 - 8) * ((100vw - 375px) / (1920 - 375)));
+    padding-bottom: calc(10px + (50 - 10) * ((100vw - 375px) / (1920 - 375)));
+    padding-left: calc(115px + (580 - 115) * ((100vw - 375px) / (1920 - 375)));
+    font-size: calc(14px + (20 - 14) * ((100vw - 375px) / (1920 - 375)));
+    margin: 0;
 }
+
+
+
 
 /* SITUATION */
 #situation{
@@ -511,29 +768,31 @@ PRODUCT
 }
 .situation{}
 .situation_section_title{
-    font-size: 96px;
+    font-size: calc(42px + (120 - 42) * ((100vw - 375px) / (1920 - 375)));
     font-weight: lighter;
     color: #378BDB;
     transform: skewX(-15deg);
     text-align: right;
-    margin: 0 2vw -50px;
+    margin: 0 2vw;
+    margin-bottom: calc(-24px + (-10 - 24) * ((100vw - 375px) / (1920 - 375)));;
 
 }
 .situation_title{
-    font-size: clamp(16px, 2vw, 40px);
     background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     letter-spacing: 0.2em;
-    padding: 8vh 0 1vh 0;
+    padding-top: calc(52px + (150 - 52) * ((100vw - 375px) / (1920 - 375)));
+    padding-bottom: calc(20px + (60 - 20) * ((100vw - 375px) / (1920 - 375)));
     position: relative;
+    margin: 0 6vw;
 }
 .situation_title::after {
     position: absolute;
     content: "";
     background-color: #186EA3;
-    width: 60vw;
+    width: calc(300px + (1000 - 300) * ((100vw - 375px) / (1920 - 375)));
     height: 6px; 
     bottom: 0px;
     left: 50%;
@@ -541,7 +800,8 @@ PRODUCT
   }
 .situation_subtitle{
     text-align: center;
-    margin: 1vh 0 4vh;
+    margin: 1vh 0 4vw;
+    padding-bottom: calc(20px + (60 - 20) * ((100vw - 375px) / (1920 - 375)));
     color: #110F1B;
 }
 .situation_Img_section{
@@ -583,13 +843,83 @@ PRODUCT
 .situation_content_title{
     font-size: clamp(18px, 1.67vw, 30px);      
 }
+/* @media (max-width: 1150px) and (min-width: 769px){
+    .situation_title{
+        background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        letter-spacing: 0.2em;
+        padding: 7vw 0 1vh 0;
+        position: relative;
+    }
+    .situation_title::after {
+        position: absolute;
+        content: "";
+        background-color: #186EA3;
+        width: 60vw;
+        height: 6px; 
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    .situation_subtitle{
+        text-align: center;
+        margin: 1vh 0 4vw;
+        color: #110F1B;
+    }
+    .situation_Img_section{
+        position: relative;
+        width: auto;
+        height: auto;
+        background-image: url("./assets/situation/situation.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    
+    }
+    .situation_1{
+        align-self: flex-start;
+        margin: 0 6vw clamp(1px, 12vh, 1000px) 6vw;
+        padding-top: clamp(10px, 6vw, 40px);
+        font-size: clamp(14px, 1.25vw, 22px);
+        color: #fff;
+        align-items: right;
+        justify-content: right;
+        text-align: right;
+    }
+    .situation_2{
+        align-self: flex-end;
+        color: #fff;
+        margin: clamp(1px, 12vh, 1000px) 6vw;
+        font-size: clamp(14px, 1.25vw, 22px);
+    }
+    .situation_3{
+        align-self: flex-start;
+        color: #fff;
+        padding: 0 0 clamp(10px, 6vw, 40px) 0;
+        margin: clamp(1px, 12vh, 1000px) 6vw 0 6vw;
+        font-size: clamp(14px, 1.25vw, 22px);
+        align-items: right;
+        justify-content: right;
+        text-align: right;
+    }
+    .situation_content_title{
+        font-size: clamp(18px, 1.67vw, 30px);      
+    }
+    
+}
+@media (max-width: 768px) and (min-width: 375px){
+}
+ */
+
 
 /* REVIEW */
 #review{
+    max-width: 100%;
     background-color: #fff;
     padding: 2vh;
 }
-.review{}
 .review_triangle{
     width:0;
     height:0;
@@ -606,6 +936,7 @@ PRODUCT
     -webkit-text-fill-color: transparent;
     text-align: center;
     letter-spacing: 0.2em;
+    padding: 1vh 0;
     margin: 0;
 }
 .uk-panel{
@@ -616,7 +947,7 @@ PRODUCT
 .uk-align-left{
     border-radius: 1vh;
 }
-.uk-margin-remove-adjacent{}
+/* .uk-margin-remove-adjacent{} */
 .review_name{
     color: #110F1B;
 }
@@ -627,6 +958,7 @@ PRODUCT
 
 /* DETAIL */
 #detail{
+    max-width: 100%;
     background-color: #E5E9EF;
     height: auto;
     align-items: center;
@@ -634,7 +966,6 @@ PRODUCT
     text-align: center;
     padding: 0 0 2vh;
 }
-.detail{}
 .detail_title{
     font-size: clamp(16px, 2vw, 40px);
     background: linear-gradient(0deg, #378BDB 0%, #110F1B 50%);
@@ -744,248 +1075,126 @@ table{
     white-space: normal;
 }
 
-/*
-<section id="FAQ" .FAQ{}
-class="FAQ_title{}
-    よくある質問
-</div>
-<div class="FAQ_subtitle">
-    Q&A
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-    <div class="FAQ_box1_Q">
-            <h3 class="uk-card-title">
-                Q
-            </h3>
-        <ul uk-accordion="multiple: true" class="uk-accordion">
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                    インソールのサイズについて教えてください。
-                </a>
-                <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                    <h3 class="uk-card-title">
-                        A
-                    </h3>
-                    <p>
-                        xxcm〜xxcmまで対応しております。<br/>
-                        カットが可能なので前後のサイズ調整まで可能です。
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="contact">
-    その他ご質問やご購入など、お気軽にお問い合わせください
-</div>
-<button class="contact_button">
-    ✉️お問い合わせ
-</button>
-</section> */
+
+#FAQ{
+    max-width: 100%;
+    background-color: #110F1B;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 2vh;
+    text-align: center;
+}
+.FAQ_title{
+    font-size: clamp(16px, 2vw, 40px);
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 4vh 0 1vh 0;
+    position: relative;
+    font-weight: bold;
+
+}
+.FAQ_title::after {
+    position: absolute;
+    content: "";
+    background-color: #186EA3;
+    width: 20vw;
+    height: 6px; 
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.FAQ_subtitle{
+    text-align: center;
+    margin: 1vh 0 4vh;
+    color: #ffffff;
+    font-size: 28px;
+}
+.FAQ_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 6vw;
+    gap: 2vw;
+}
+.accordion-008 {
+    width: 42vw;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 7px 15px -5px rgb(0 0 0 / 5%);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.accordion-008 summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    color: #186EA3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accordion-008 summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-008 summary::before,
+.accordion-008 summary::after {
+    width: 3px;
+    height: .9em;
+    border-radius: 5px;
+    background-color: #186EA3;
+    content: '';
+}
+
+.accordion-008 summary::before {
+    position: absolute;
+    right: 2em;
+    rotate: 90deg;
+}
+
+.accordion-008 summary::after {
+    transition: rotate .3s;
+}
+
+.accordion-008[open] summary::after {
+    rotate: 90deg;
+}
+
+.accordion-008 p {
+    margin: 0;
+    padding: .3em 2em 1.5em;
+    text-align: left;
+    color: #110f1b;
+    transition: transform .5s, opacity .5s;
+}
+
+.accordion-008[open] p {
+    transform: none;
+    opacity: 1;
+}
+.contact{
+    padding: 3vw 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 1vw;
+}
+.contact_button{
+    background: linear-gradient(90deg, rgba(24, 110, 163, 1) 20%, rgba(229, 233, 239, 1) 100%);
+    color: white;
+    font-size: 28px;
+    padding: 1vh 8vw;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6vw;
+    margin-bottom: 4vw;
+    letter-spacing: 1em;
+}
+.contact_button:hover {
+    background: #378BDB;
+    cursor: pointer;
+}
+
