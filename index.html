@@ -13,13 +13,14 @@
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit-icons.min.js"></script>
 
         <link rel="stylesheet" href="./style.css">
-        <!-- <script src="./feature.js" defer></script> -->
+        <script src="./feature.js" defer></script>
         <title>LP test</title>
 </head>
 
 <body class="all">
 
-    <section id="header" class="header">
+    <!-- ヘッダー -->
+    <section id="header" class="no-animation">
         <div class="uk-container uk-container-expand">
             <div uk-navbar="" class="uk-navbar">
             <div class="uk-navbar-left">
@@ -88,25 +89,43 @@
         </div>
     </section>
 
+    <!-- トップ・MV -->
     <section id="top" class="top">
-        <img src="" class="top_Img">
-        <p class="sub_copy">
-            主観から客観的な自己認知
-        </p>
-        <h1 class="catch_copy">
-            ゴルフはデータで<span style="font-size:1.4em"><span style="color: aqua;">進化</span> </span>する
-        </h1>
+        <div class="top_background">
+            <div class="foreground">
+                <img src="./assets/top/MV_product_min.png" alt="Foreground Image">
+                <p class="sub_copy">
+                    主観から客観的な自己認知
+                </p>
+                <h1 class="catch_copy">
+                    ゴルフはデータで<span style="font-size:1.4em">進化</span>する
+                </h1>
+            </div>
+        </div>
     </section>
 
+    <!-- Background 背景固定 (fixed) -->
+    <!-- <div
+      class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-background-bottom-center uk-background-fixed"
+      data-src="./assets/top/MV_background.png" uk-img>
+      <div>
+        <span class="uk-light uk-padding-remove" style="font-size:2vw;">感覚から客観的に自己認知</span><br />
+        <span class="uk-heading-medium uk-text-italic uk-light uk-padding-remove"
+          style="font-size:5vw;">データでゴルフは<span style="color: #378BDB;">進化</span>する</span>
+      </div>
+    </div> -->
+
+
+    <!-- コンセプト -->
     <section id="concept" class="concept">
-        <h1 class="concept_title">
+        <div class="concept_title">
             <div class="concept_title1">
                 感覚的な理解から
             </div>
             <div class="concept_title2">
                 データに基づく分析で
             </div>
-        </h1>
+        </div>
         <h2 class="concept_section_title">
             Concept
         </h2>
@@ -118,6 +137,7 @@
         </p>
     </section>
 
+    <!-- シナジー -->
     <section id="synergy" class="synergy">
         <div class="synergy_section_title">
             Synergy
@@ -154,26 +174,26 @@
                 <img src="./assets/synergy/IoB_image-02.png" class="synergy_Img">
             </div>
         </div>
-        <div class="synergy_summary">
-            <div>
-                このように、点と点、線と線が交わることで、<br/>
-                単独では成し得なかった成果が生まれ、<br/>
-                シナジー効果が発揮されます。​<br/>
-            </div>
-        </div>
+        <p class="synergy_summary">
+            このように、点と点、線と線が交わることで、<br/>
+            単独では成し得なかった成果が生まれ、<br/>
+            シナジー効果が発揮されます。​<br/>
+        </p>
     </section>
 
+    <!-- solution -->
     <section id="solution" class="solution">
         <div class="IoB_text">
             Internet of Bodies
         </div>
-        <h1 class="solution_title">
-            自分を深く理解することで、新たな未来が待っている
-        </h1>
-        <div class="solution_subtitle">
-            データに基づいた科学的アプローチで隠れた課題を明確化。上達をサポートします
+        <div class="title">
+            <h1 class="solution_title">
+                自分を深く理解することで、新たな未来が待っている
+            </h1>
+            <p class="solution_subtitle">
+                データに基づいた科学的アプローチで隠れた課題を明確化。上達をサポートします
+            </p>
         </div>
-        <!-- ペンタゴンの形のカード入れたい -->
         <div class="solution_card">
             <div class="solution_content1">
                 <div class="solution_number">
@@ -182,8 +202,7 @@
                 <div class="hexagon">
                     <div class="solution_card_content">
                         <h3 class="solution_card_content_title">
-                            データ化して活用する<br/>
-                            メリット
+                            データ化して活用するメリット
                         </h3>
                         <p>
                             自身のパフォーマンスをデータ化することで、統計的な情報に基づいて、過去の振り返り・現在の状況・未来の予測に役立ちます。
@@ -198,8 +217,7 @@
                 <div class="hexagon">
                     <div class="solution_card_content">
                         <h3 class="solution_card_content_title">
-                            数値を意識する<br/>
-                            メリット
+                            数値を意識するメリット
                         </h3>
                         <p>
                             感覚や印象に頼らず、データに基づいた客観的な判断が可能になり、自己の行動を相対的に把握することが可能になります。
@@ -214,8 +232,7 @@
                 <div class="hexagon">
                     <div class="solution_card_content">
                         <h3 class="solution_card_content_title">
-                            データを可視化する<br/>
-                            メリット
+                            データを可視化するメリット
                         </h3>
                         <p>
                             データを可視化することで、数値では捉えにくい隠れたパターンやトレンドの把握がしやすくなり、専門的な知識がなくても直感的にな理解に役立ちます。
@@ -228,16 +245,15 @@
     </section>
 
     <section id="products" class="products">
-        <img src="./assets/product/product_background_Img.jpg" class="product_background_Img">
+        <img src="./assets/product/product_background_Img-min.png" class="product_background_Img">
         <div class="products_section_title">
             Products
         </div>
-        <!-- カード３つ、斜め線区切り -->
          <div class="product_card">
             <!-- カード1 INSOLYIS -->
             <div class="product_card_content">
                 <img src="./assets/product/INSOLYIS_logo.svg" class="product_insolyis_logo">
-                <img src="./assets/product/INSOLYIS_クロス.png" class="product_insolyis_Img">
+                <img src="./assets/product/product_insolyis_Img.png" class="product_insolyis_Img">
                 <p class="product_insolyis_text">
                     足圧重心（CoP）の移動を可視化<br/>
                     スイング中の体重移動やバランスがどのようになっているかを分析
@@ -249,7 +265,7 @@
             <!-- カード2 LYZER -->
             <div class="product_card_content">
                 <img src="./assets/product/SHOTLYZER_logo.svg" class="product_lyzer_logo">
-                <img src="./assets/product/LYZER_斜め.png" class="product_lyzer_Img">
+                <img src="./assets/product/product_lyzer_Img.png" class="product_lyzer_Img">
                 <p class="product_lyzer_text">
                     足圧重心（CoP）の移動を可視化<br/>
                     スイング中の体重移動やバランスがどのようになっているかを分析
@@ -261,7 +277,7 @@
             <!-- カード3 Tracker -->
             <div class="product_card_content">
                 <img src="./assets/product/ShotTracker_logo.svg" class="product_tracker_logo">
-                <img src="./assets/product/Tracker_斜め.png" class="product_tracker_Img">
+                <img src="./assets/product/product_tracker_Img.png" class="product_tracker_Img">
                 <p class="product_tracker_text">
                     足圧重心（CoP）の移動を可視化<br/>
                     スイング中の体重移動やバランスがどのようになっているかを分析
@@ -276,121 +292,13 @@
             <h1 class="product_subtitle">
                 練習からプレーまで活躍する多機能デバイス
             </h1>
-            <div class="product_text">
+            <p class="product_text">
                 INSOLYISで足圧中心（CoP）を分析、Shot Lyzerでクラブスピードを記録。<br/>
                 さらにクラブをShot Trackerで識別することで全てを自動化。<br/>
                 組み合わせて使うことで、自分のパフォーマンスを効率よく把握でき、上達をサポートします。
-            </div>
+            </p>
         </div>
     </section>
-
-    <!-- <section id="feature" class="feature">
-        <h1 class="feature_title">
-            機能紹介
-        </h1>
-        <ul uk-tab class="feature_tab">
-            <li class="uk-active">
-                <img src="./assets/feature/step-icon_app連携.png" class="app_icon">
-                <a href="#">アプリ連携</a>
-            </li>
-            <li class="uk-active">
-                <img src="./assets/feature/step-icon_ショット.png" class="shot_icon">
-                <a href="#">履歴・分析機能</a>
-            </li>
-            <li class="uk-active">
-                <img src="./assets/feature/step-icon_インソールの足圧.png" class="cop_icon">
-                <a href="#">CoP測定</a>
-            </li>
-            <li class="uk-active">
-                <img src="./assets/feature/step-icon_速度.png" class="speed_icon">
-                <a href="#">スピード計測</a>
-            </li>
-            <li class="uk-active">
-                <img src="./assets/feature/ShotTracker_icon.png" class="tracker_icon">
-                <a href="#">クラブ識別</a>
-            </li>
-        </ul>
-        <div class="feature_background_text">
-            Feature<br/>
-            Introduction
-        </div>
-        <div class="feature_carousel">
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div class="feature_app">
-                    <div class="uk-card uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="images/light.jpg" width="1800" height="1200" alt="">
-                            <img src="" class="feature_app_content">
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">アプリを介して製品同士の機能が連携、新たな指標が明確に</h3>
-                            <p>
-                                Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br/>
-                                各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br/>
-                                例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div class="feature_synergy">
-                    <div class="uk-card uk-card-default">
-                         <div class="uk-card-media-top">
-                            <img src="images/light.jpg" width="1800" height="1200" alt="">
-                            <img src="" class="feature_synergy_content">
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div class="feature_lyzer">
-                    <div class="uk-card uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="images/light.jpg" width="1800" height="1200" alt="">
-                            <img src="" class="feature_lyzer_conten">
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div class="feature_insolyis">
-                    <div class="uk-card uk-card-default">
-                         <div class="uk-card-media-top">
-                            <img src="images/light.jpg" width="1800" height="1200" alt="">
-                            <img src="" class="feature_insolyis_content">
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div class="feature_tracker">
-                    <div class="uk-card uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="images/light.jpg" width="1800" height="1200" alt="">
-                            <img src="" class="feature_tracker_content">
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">アプリと連携して便利にデータ化を意識することを書く</h3>
-                            <p>INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="feature" class="feature">
         <h1 class="feature_title">
@@ -528,16 +436,16 @@
         <h1 class="situation_title">
             シチュエーションごとの活用法
         </h1>
-        <div class="situation_subtitle">
+        <p class="situation_subtitle">
             様々なシチュエーションで上達を徹底サポート
-        </div>
+        </p>
         <div class="situation_Img_section">
             <!-- pictureを使ってサイズごとに画像を変更する？ -->
             <!-- <img src="./assets/situation/situation.png"> -->
             <div class="situation_1">
-                <div class="situation_content_title">
+                <h3 class="situation_content_title">
                      ゴルフレッスンやスクールで客観的にサポート
-                </div>
+                </h3>
                  <p>
                     レッスンで使用することで改善箇所や課題をデータで可視化。<br/>
                     相対的指標の把握や可視化されたデータを用いることで、<br/>
@@ -545,19 +453,19 @@
                 </p>
             </div>
             <div class="situation_2">
-                <div class="situation_content_title">
+                <h3 class="situation_content_title">
                     日々の練習でデータを分析、効率よく上達
-                </div>
+                </h3>
                 <p>
                     毎日の練習で収集したデータをもとに、スイングの傾向や癖を把握。<br/>
                     科学的なアプローチで確実な成長を実現します
                  </p>
             </div>
             <div class="situation_3">
-                <div class="situation_content_title">
+                <h3 class="situation_content_title">
                     実際のプレー中に記録・分析し、<br/>
                     自身のプレーをフィードバック
-                </div>
+                </h3>
                 <p>
                     ラウンド中の足圧中心の移動やスイングスピードをリアルタイムに把握<br/>
                     ラウンド時と練習時の違いや課題を明確に、次のラウンドに活かせます
@@ -583,146 +491,152 @@
     </section>
 
     <section id="detail" class="detail">
-        <div class="detail_title">
+        <h3 class="detail_title">
             DETAILS
-        </div>
-        <div class="detail_subtitle">
+        </h3>
+        <p class="detail_subtitle">
             商品詳細
-        </div>
+        </p>
         <div class="detail_card">
-            <ul class="detail_card_item">
-                <li>
+            <div class="detail_card_item">
+                <div class="detail_left">
                     <img src="./assets/product/INSOLYIS_logo.svg" class="detail_card_logo">
-                    <img src="./assets/product/INSOLYIS_正面.png" class="detail_card_product">
-                    <p>
+                    <img src="./assets/detail/detail_insolyis_Img.png" class="detail_card_product">
+                    <span>
                         ¥XX,XXX- (税込)
-                    </p>
+                    </span>
                     <button class="detail_button">
                         商品を購入する
                     </button>
-                    <table border="1">
+                </div>
+                <div class="detail_rigth">
+                    <table>
                         <tr>
-                          <th>寸法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>寸法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>重量</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>重量</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>ディスプレイ</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>ディスプレイ</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>バッテリー</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>バッテリー</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>防水</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>防水</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>使用可能時間</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>使用可能時間</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>データ更新方法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>データ更新方法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>付属品</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>付属品</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>ここは情報を</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>ここは情報を</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
-                      </table>
-                </li>
-            </ul>
-            <ul class="detail_card_item">
-                <li>
+                    </table>
+                </div>
+            </div>
+            <div class="detail_card_item">
+                <div class="detail_left">
                     <img src="./assets/product/SHOTLYZER_logo.svg" class="detail_card_logo">
-                    <img src="./assets/product/LYZER_正面.png" class="detail_card_product">
-                    <p>
+                    <img src="./assets/detail/detail_lyzer_Img.png" class="detail_card_product">
+                    <span>
                         ¥XX,XXX- (税込)
-                    </p>
+                    </span>
                     <button class="detail_button">
                         商品を購入する
                     </button>
-                    <table border="1">
+                </div>
+                <div class="detail_rigth">
+                    <table>
                         <tr>
-                          <th>寸法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>寸法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>重量</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>重量</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>ディスプレイ</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>ディスプレイ</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>バッテリー</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>バッテリー</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>防水</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>防水</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>使用可能時間</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>使用可能時間</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>データ更新方法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>データ更新方法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>付属品</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>付属品</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>ここは情報を</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>ここは情報を</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
-                      </table>
-                </li>
-            </ul>
-            <ul class="detail_card_item">
-                <li>
+                    </table>
+                </div>
+            </div>
+            <div class="detail_card_item">
+                <div class="detail_left">
                     <img src="./assets/product/ShotTracker_logo.svg" class="detail_card_logo">
-                    <img src="./assets/product/Tracker_正面.png" class="detail_card_product">
-                    <p>
+                    <img src="./assets/detail/detail_tracker_Img.png" class="detail_card_product">
+                    <span>
                         ¥XX,XXX- (税込)
-                    </p>
+                    </span>
                     <button class="detail_button">
                         商品を購入する
                     </button>
-                    <table border="1">
+                </div>
+                <div class="detail_rigth">
+                    <table>
                         <tr>
-                          <th>寸法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>寸法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>重量</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>重量</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>ディスプレイ</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>ディスプレイ</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>バッテリー</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>バッテリー</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>防水</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>防水</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>使用可能時間</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>使用可能時間</th><td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>データ更新方法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>データ更新方法</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>付属品</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>付属品</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
                         <tr>
-                          <th>ここは情報を</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+                        <th>ここは情報を</th><td>XXXXXXXXXXXXXXXXXXXXXXXX<br/>XXXXXXXXXXXXXXXXXXXXXXXX</td>
                         </tr>
-                      </table>
-                </li>
-            </ul>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="FAQ" class="FAQ">
-        <div class="FAQ_title">
+        <h1 class="FAQ_title">
             よくある質問
-        </div>
-        <div class="FAQ_subtitle">
+        </h1>
+        <p class="FAQ_subtitle">
             Q&A
-        </div>
+        </p>
         <div class="FAQ_box">
             <div>
                 <details class="accordion-008">
@@ -783,333 +697,34 @@
                 </details>
             </div>
         </div>
-        <!-- <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-            <div class="FAQ_box1_Q">
-                    <h3 class="uk-card-title">
-                        Q
-                    </h3>
-                <ul uk-accordion="multiple: true" class="uk-accordion">
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="" id="uk-accordion-1" role="button" aria-controls="uk-accordion-2" aria-expanded="true" aria-disabled="false">
-                            インソールのサイズについて教えてください。
-                        </a>
-                        <div class="uk-accordion-content" id="uk-accordion-2" role="region" aria-labelledby="uk-accordion-1">
-                            <h3 class="uk-card-title">
-                                A
-                            </h3>
-                            <p>
-                                xxcm〜xxcmまで対応しております。<br/>
-                                カットが可能なので前後のサイズ調整まで可能です。
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
-        <div class="contact">
+        <p class="contact">
             その他ご質問やご購入など、お気軽にお問い合わせください
-        </div>
-        <button class="contact_button">
-            ✉️お問い合わせ
-        </button>
+        </p>
+        <a href="https://online-shop.shotnavi.jp/" target="_blank" rel="noopener noreferrer">
+            <button class="contact_button">
+                お問い合わせ
+            </button>
+        </a>
     </section>
 
-<!-- 
-    <section id="FAQ" class="FAQ">
-        <div class="FAQ_title">
-            よくある質問
-        </div>
-        <div class="FAQ_subtitle">
-            Q&A
-        </div>
-        
-        <ul class="list">
-            <li class="list-item">
-                <div class="item-inner">
-                    <div class="item-front">
-                        <i class="icon-q"></i>
-                        <p class="item-text">
-                            送料について教えてください
-                        </p>
-                        <div class="item-dots">
-                        </div>
-                    </div>
-                    <div class="item-back">
-                        <i class="icon-a"></i>
-                        <p class="item-text">
-                            購入金額が2,000円以上の場合、送料が無料となります<br>未満の場合、送料は500円です
-                        </p>
-                        <div class="item-dots"></div>
-                    </div>
+        <div class="uk-container uk-container-xlarge">
+            <div class="uk-section-xsmall">
+            <hr>
+            <div class="uk-section-xsmall uk-text-center">
+                <div>
+                <a href="/docs/service/"><button class="uk-button uk-button-secondary uk-margin">ご利用案内</button></a>
+                <a href="/docs/info/rule.php"><button class="uk-button uk-button-secondary uk-margin">ご利用規約</button></a>
+                <a href="/docs/info/privacy.php"><button class="uk-button uk-button-secondary uk-margin">プライバシーポリシー</button></a>
+                <a href="/docs/info/hanbai.php"><button class="uk-button uk-button-secondary uk-margin">特定商取引に基づく表示</button></a>
+                <a href="http://www.techtuit.co.jp/"><button class="uk-button uk-button-secondary uk-margin">会社情報</button></a>
                 </div>
-            </li>
-            <li class="list-item">
-                <div class="item-inner">
-                    <div class="item-front">
-                        <i class="icon-q"></i>
-                        <p class="item-text">
-                            配送日付を選べますか？
-                        </p>
-                        <div class="item-dots"></div>
-                    </div>
-                    <div class="item-back">
-                        <i class="icon-a"></i>
-                        <p class="item-text">
-                            はい、配送日付は選択できます<br>ご注文時にお好きな配送日を指定していただけます
-                        </p>
-                        <div class="item-dots"></div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-item">
-                <div class="item-inner">
-                    <div class="item-front">
-                        <i class="icon-q"></i>
-                        <p class="item-text">
-                            国際配送は行っていますか？
-                        </p>
-                        <div class="item-dots"></div>
-                    </div>
-                    <div class="item-back">
-                        <i class="icon-a"></i>
-                        <p class="item-text">
-                            はい、国際配送も行っております<br>送料についての詳細テーブルにご参照ください
-                        </p>
-                        <div class="item-dots"></div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        </section> -->
-
-
-    <div class="uk-container uk-container-xlarge">
-        <div class="uk-section-xsmall">
-          <hr>
-          <div class="uk-section-xsmall uk-text-center">
-            <p>
-              <a href="/docs/service/"><button class="uk-button uk-button-secondary uk-margin">ご利用案内</button></a>
-              <a href="/docs/info/rule.php"><button class="uk-button uk-button-secondary uk-margin">ご利用規約</button></a>
-              <a href="/docs/info/privacy.php"><button class="uk-button uk-button-secondary uk-margin">プライバシーポリシー</button></a>
-              <a href="/docs/info/hanbai.php"><button class="uk-button uk-button-secondary uk-margin">特定商取引に基づく表示</button></a>
-              <a href="http://www.techtuit.co.jp/"><button class="uk-button uk-button-secondary uk-margin">会社情報</button></a>
-            </p>
-          </div>
-          <div class="uk-section-xsmall uk-text-right uk-padding-remove -uk-margin-remove">
-            <small>「Shot Navi」はテクタイト株式会社の登録商標です。
-              <br>Copyright © 2022 Techtuit Co., Ltd. All Rights Reserved.</small>
-          </div>
+            </div>
+            <div class="uk-section-xsmall uk-text-right uk-padding-remove -uk-margin-remove">
+                <small>「Shot Navi」はテクタイト株式会社の登録商標です。
+                <br>Copyright © 2022 Techtuit Co., Ltd. All Rights Reserved.</small>
+            </div>
+            </div>
         </div>
-      </div>
-
-
 
 
 </body>

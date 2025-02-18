@@ -51,53 +51,71 @@
 //     window.addEventListener("wheel", handleScroll);
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector("#feature");
-    const tabWrap = document.querySelector(".tab_wrap");
-    const tabs = document.querySelectorAll(".tab_label");
-    const contents = document.querySelectorAll(".tab_content");
-    const indicators = document.createElement("div");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const section = document.querySelector("#feature");
+//     const tabWrap = document.querySelector(".tab_wrap");
+//     const tabs = document.querySelectorAll(".tab_label");
+//     const contents = document.querySelectorAll(".tab_content");
+//     const indicators = document.createElement("div");
     
-    // indicators.classList.add("indicators");
-    tabWrap.appendChild(indicators);
+//     // indicators.classList.add("indicators");
+//     tabWrap.appendChild(indicators);
 
-    tabs.forEach((tab, index) => {
-        const dot = document.createElement("div");
-        dot.classList.add("indicator");
-        if (index === 0) dot.classList.add("active");
-        indicators.appendChild(dot);
-    });
+//     tabs.forEach((tab, index) => {
+//         const dot = document.createElement("div");
+//         dot.classList.add("indicator");
+//         if (index === 0) dot.classList.add("active");
+//         indicators.appendChild(dot);
+//     });
 
-    const indicatorDots = document.querySelectorAll(".indicator");
-    let isScrolling = false;
+//     const indicatorDots = document.querySelectorAll(".indicator");
+//     let isScrolling = false;
 
-    function handleScroll(event) {
-        if (isScrolling) return;
-        isScrolling = true;
+//     function handleScroll(event) {
+//         if (isScrolling) return;
+//         isScrolling = true;
 
-        let activeIndex = Array.from(contents).findIndex(content => content.classList.contains("active"));
-        if (event.deltaY > 0 && activeIndex < contents.length - 1) {
-            activeIndex++;
-        } else if (event.deltaY < 0 && activeIndex > 0) {
-            activeIndex--;
-        }
+//         let activeIndex = Array.from(contents).findIndex(content => content.classList.contains("active"));
+//         if (event.deltaY > 0 && activeIndex < contents.length - 1) {
+//             activeIndex++;
+//         } else if (event.deltaY < 0 && activeIndex > 0) {
+//             activeIndex--;
+//         }
         
-        updateActiveTab(activeIndex);
-        setTimeout(() => { isScrolling = false; }, 500);
-    }
+//         updateActiveTab(activeIndex);
+//         setTimeout(() => { isScrolling = false; }, 500);
+//     }
 
-    function updateActiveTab(index) {
-        contents.forEach((content, i) => {
-            content.classList.toggle("active", i === index);
-        });
-        tabs.forEach((tab, i) => {
-            tab.classList.toggle("active", i === index);
-        });
-        indicatorDots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === index);
-        });
-    }
+//     function updateActiveTab(index) {
+//         contents.forEach((content, i) => {
+//             content.classList.toggle("active", i === index);
+//         });
+//         tabs.forEach((tab, i) => {
+//             tab.classList.toggle("active", i === index);
+//         });
+//         indicatorDots.forEach((dot, i) => {
+//             dot.classList.toggle("active", i === index);
+//         });
+//     }
 
-    section.addEventListener("wheel", handleScroll);
+//     section.addEventListener("wheel", handleScroll);
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // 例えば「pタグ」「imgタグ」など特定の要素にアニメーションを適用
+    const fadeElements = document.querySelectorAll("p, img, h1, h2, h3, button, .fadeup-target"); 
+
+    // IntersectionObserverの設定
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            // entry.targetが.no-animationクラスを持つ親要素内に含まれている場合、アニメーションしない
+            if (entry.isIntersecting && !entry.target.closest(".no-animation")) {
+                entry.target.classList.add("active"); // 画面に入ったらクラス追加
+                observer.unobserve(entry.target); // 1回だけ実行
+            }
+        });
+    }, { threshold: 0.3 });
+
+    // fadeElementsの各要素を監視
+    fadeElements.forEach((el) => observer.observe(el));
 });
-
