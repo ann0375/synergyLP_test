@@ -1,8 +1,8 @@
 @charset "utf-8" ;
 
-/* * {
+* {
     outline: 1px solid rgb(58, 54, 91);
-} */
+}
 
 /* 
 all
@@ -93,12 +93,12 @@ p.active, img.active, h1.active, h2.active, h3.active, button.active, .fadeup-ta
     overflow: hidden;
 }
 .top_background{
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: auto;
     background-image: url("./assets/top/MV_background.png");
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-size: 100vw auto;
+    background-position: center top;
     background-repeat: no-repeat;
     z-index: -2;
 }
@@ -115,7 +115,7 @@ p.active, img.active, h1.active, h2.active, h3.active, button.active, .fadeup-ta
 }
 .sub_copy{
     position: absolute;
-    top: calc(140px + (280 - 140) * ((100vw - 1151px) / (1920 - 1151)));
+    top: calc(250px + (380 - 250) * ((100vw - 1151px) / (1920 - 1151)));
     left: calc(50px + (150 - 50) * ((100vw - 1151px) / (1920 - 1151)));
     color: rgba(255, 255, 255, 0.9);
     font-size: calc(20px + (40 - 20) * ((100vw - 375px) / (1920 - 375)));
@@ -127,7 +127,7 @@ p.active, img.active, h1.active, h2.active, h3.active, button.active, .fadeup-ta
 }
 .catch_copy{
     position: absolute;
-    top: calc(150px + (300 - 150) * ((100vw - 1151px) / (1920 - 1151)));
+    top: calc(280px + (420 - 280) * ((100vw - 1151px) / (1920 - 1151)));
     left: calc(50px + (150 - 50) * ((100vw - 1151px) / (1920 - 1151)));
     color: rgba(255, 255, 255, 0.9);
     font-size: calc(30px + (80 - 30) * ((100vw - 375px) / (1920 - 375)));
@@ -141,7 +141,12 @@ p.active, img.active, h1.active, h2.active, h3.active, button.active, .fadeup-ta
     #top{
         height: calc(500px + (600 - 500) * ((100vw - 375px) / (1150 - 375)));
     }
-    .foreground img {
+    .top_background{
+        background-image: url("./assets/top/MV_background_1150px.png");
+        background-attachment: fixed;
+        background-size: 100vw auto;
+    }
+    .image_wrapper {
         width: auto;
         height: calc(500px + (600 - 500) * ((100vw - 375px) / (1150 - 375)));
         object-fit: cover; 
@@ -155,6 +160,12 @@ p.active, img.active, h1.active, h2.active, h3.active, button.active, .fadeup-ta
         left: calc(30px + (60 - 30) * ((100vw - 375px) / (1150 - 375)));
     }
 }
+@media (max-width: 500px) and (min-width: 374px)  {
+    .br::after {
+      content: "\A";  /* \A は改行（CSSでの <br> 相当） */
+      white-space: pre;
+    }
+  }
 
 
 /* CONCEPT */
@@ -416,7 +427,7 @@ p.active, img.active, h1.active, h2.active, h3.active, button.active, .fadeup-ta
     transform: skewX(-15deg);
     color: #378BDB;
     text-align: center;
-    margin-top:  calc(-6vh + (10 - 6) * ((100vw - 375px) / (1920 - 375)));
+    margin-top:  calc(-40px + (-60 + 40) * ((100vw - 375px) / (1920 - 375)));
     z-index: 3;
     overflow: hidden;
 }
@@ -478,14 +489,14 @@ p.active, img.active, h1.active, h2.active, h3.active, button.active, .fadeup-ta
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: calc(-40px + (-110 + 40) * ((100vw - 375px) / (1150 - 375))) 0 0 calc(-180px + (-340 + 180) * ((100vw - 375px) / (1150 - 375)));
+        margin: calc(-41px + (-44 + 41) * ((100vw - 375px) / (1150 - 375))) 0 0 calc(-179px + (-340 + 179) * ((100vw - 375px) / (1150 - 375)));
     }
     .solution_content3{
         width: calc(180px + (340 - 180) * ((100vw - 375px) / (1150 - 375)));
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: calc(-191px + (-400 + 191) * ((100vw - 375px) / (1150 - 375))) calc(-180px + (-340 + 180) * ((100vw - 375px) / (1150 - 375))) 0 0;
+        margin: calc(-191px + (-334 + 191) * ((100vw - 375px) / (1150 - 375))) calc(-180px + (-340 + 180) * ((100vw - 375px) / (1150 - 375))) 0 0;
     }
     .solution_box{
         width: calc(250px + (700 - 250) * ((100vw - 375px) / (1150 - 375)));
