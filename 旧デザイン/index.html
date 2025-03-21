@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="no description">
+
+    <!-- UIkitのCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/css/uikit.min.css" />
+    <!-- UIkitのJavaScript（jQuery不要）-->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./feature.js" defer></script>
+    <title>LP test</title>
+</head>
+
+<body class="all">
+
+    <!-- ヘッダー -->
+    <section id="header" class="no-animation">
+        <div class="uk-container uk-container-expand">
+            <div uk-navbar="" class="uk-navbar">
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="https://shotnavi.jp/"><img
+                            src="./assets/ShotNavi ロゴ_白赤2種.png" style="max-width:150px;"></a>
+                </div>
+                <ul class="uk-navbar-nav uk-visible@s uk-subnav-divider uk-text-center uk-margin-left">
+                    <li><a href="https://shotnavi.jp/">HOME</a></li>
+                    <li class="uk-text-left">
+                        <a href="https://shotnavi.jp/snp/" role="button" aria-haspopup="true">ShotNavi</a>
+                        <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2 uk-drop"
+                            style="top: 95px; left: 283.172px; max-width: 1624px;">
+                            <div class="uk-navbar-dropdown-grid uk-child-width-1-2 uk-grid uk-grid-stack" uk-grid="">
+                                <div class="uk-first-column">
+
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-nav-header">Shot Navi GPS</li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li class="uk-active"><a href="/snp/air/">Air (New!)</a></li>
+                                        <li><a href="/snp/crest/">Crest</a></li>
+                                        <li><a href="/snp/evolve/">W1 Evolve</a></li>
+                                        <li><a href="/snp/beyondlite/">HuG beyond Lite</a></li>
+                                        <li><a href="/snp/beyond/">HuG beyond</a></li>
+                                        <li><a href="/snp/neo2hp/">NEO2 HP</a></li>
+                                        <li><a href="/snp/hugfw/">HuG-FW</a></li>
+                                        <li><a href="/snp/v2/">V2</a></li>
+                                        <li><a href="/snp/w1fw/">W1-FW</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-nav-header">Voice Laser</li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href="/snp/voicelaser/redleo/">Red LEO</a></li>
+                                        <li><a href="/snp/voicelaser/leo/">LEO</a></li>
+                                        <li class="uk-nav-header">Laser Sinper</li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href="/snp/lasersniper/nano/">nano</a></li>
+                                        <li><a href="/snp/lasersniper/x1fit2/">Fit2 1000</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="https://shotnavi.jp/scolog/">SCOログ</a></li>
+                    <li><a href="https://shotnavi.jp/gc/">ゴルフ場情報</a></li>
+                    <li><a href="https://shotnavi.thebase.in/" target="_blank">公式ショップ</a></li>
+                    <li><a href="https://shotnavi.jp/mypage/">マイページ</a></li>
+                </ul>
+
+                <div class="uk-navbar-right uk-hidden@s">
+                    <div class="uk-navbar-nav">
+                        <li class="uk-active uk-padding-remove"><a href="#" role="button" aria-haspopup="true"
+                                aria-label="Open menu"><span uk-navbar-toggle-icon=""
+                                    class="uk-icon uk-navbar-toggle-icon"><svg width="20" height="20"
+                                        viewBox="0 0 20 20">
+                                        <style>
+                                            .uk-navbar-toggle-icon svg&gt;
+
+                                            [class*="line-"] {
+                                                transition: 0.2s ease-in-out;
+                                                transition-property: transform, opacity;
+                                                transform-origin: center;
+                                                opacity: 1
+                                            }
+
+                                            .uk-navbar-toggle-icon svg&gt;
+
+                                            .line-3 {
+                                                opacity: 0
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-3 {
+                                                opacity: 1
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-2 {
+                                                transform: rotate(45deg)
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-3 {
+                                                transform: rotate(-45deg)
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+                                            .line-1,
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-4 {
+                                                opacity: 0
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-1 {
+                                                transform: translateY(6px) scaleX(0)
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-4 {
+                                                transform: translateY(-6px) scaleX(0)
+                                            }
+                                        </style>
+                                        <rect width="20" height="2" y="3" class="line-1"></rect>
+                                        <rect width="20" height="2" y="9" class="line-2"></rect>
+                                        <rect width="20" height="2" y="9" class="line-3"></rect>
+                                        <rect width="20" height="2" y="15" class="line-4"></rect>
+                                    </svg></span> <span class="uk-margin-small-left">Menu</span></a>
+                            <div class="uk-navbar-dropdown uk-drop">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="https://shotnavi.jp/">HOME</a></li>
+                                    <li><a href="https://shotnavi.jp/snp/">ShotNavi</a></li>
+                                    <li><a href="https://shotnavi.jp/scolog/">SCOログ</a></li>
+                                    <li><a href="https://shotnavi.jp/gc/">ゴルフ場情報</a></li>
+                                    <li><a href="https://shotnavi.thebase.in/" target="_blank">公式ショップ</a></li>
+                                    <li><a href="https://shotnavi.jp/mypage/">マイページ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- トップ・MV -->
+    <section id="synergy__top" class="synergy__section synergy__top-section">
+        <div class="hero-img synergy___hero-img">
+            <div>
+                <picture>
+                    <source srcset="./assets/top/MV_product_1150px.webp" media="(max-width: 1150px)" loading="lazy">
+                    <img src="./assets/top/MV_product.webp" alt="no image..." loading="lazy"
+                        class="synergy__top-foreground">
+                </picture>
+            </div>
+            <p class="synergy__copy synergy__top-copy--sub">
+                主観から客観的な自己認知
+            </p>
+            <h1 class="synergy__copy synergy__top-copy">
+                ゴルフはデータで<span class="br"></span><span style="font-size:1.4em">進化</span>する
+            </h1>
+        </div>
+    </section>
+
+    <!-- コンセプト -->
+    <section id="synergy__concept" class="synergy__section synergy__concept-section">
+        <div class="synergy__concept-container">
+            <div class="title synergy__concept-title">
+                <div>感覚的な理解から</div>
+                <div>データに基づく分析で</div>
+            </div>
+            <h2> Concept</h2>
+            <p>
+                ゴルフは「再現性のスポーツ」と言われており、同じショットを何度も正確に繰り返すことがスコアメイクにつながります。<br />
+                ショットの再現性が高ければ、プレーの結果が安定し、スコアを向上させることが可能です。<br /><br />
+                私たちは、ゴルフスイングの効果的なトレーニングを支援するため、タイミング、精度、姿勢などの技術要素を効率的に改善できる製品は実現できないかというコンセプトを基に新しい機器を企画し開発しました。<br /><br />
+                従来からある各種指標を計測できる装置を再定義し、その装置装置が持つ各々の機能を結びつけ、新たな価値を想像します。
+            </p>
+        </div>
+    </section>
+
+    <!-- シナジー -->
+    <section id="synergy__synergy" class="synergy__section synergy__synergy-section">
+        <div class="synergy__section-title">
+            Synergy
+        </div>
+        <div class="synergy__synergy-wrapper">
+            <div class="synergy__synergy-area">
+                <h2 class="title synergy__synergy-title">
+                    <div>製品と製品が繋がることで</div>
+                    <div>生まれるシナジー効果</div>
+                </h2>
+                <p>
+                    様々な指標を計測する製品が連携することで、単独の製品のみでは得られない新たな価値を創造します。
+                </p>
+                <div class="synergy__synergy-text">
+                    <h3>点と点のシナジー効果</h3>
+                    <p>
+                        「点と点がつながることで、個々の力が掛け算のように増幅する。」​単独では何もない点が、他の点と結びつくことで初めて力を発揮します。それぞれが持つポテンシャルが組み合わさり、全体としては個々の合計を超える力を生み出すのです。まるでバラバラだったピースがひとつになり、全く新しい価値を生み出すような感覚です。
+                    </p>
+                    <h3>線と線のシナジー効果</h3>
+                    <p>
+                        「線と線が交差することで、直線では見えなかった可能性が広がる。」​個々の線が交わることで、新しい方向性や視点が生まれ、それぞれの線がもつエネルギーや情報が融合し、予想以上の価値を生み出します。たとえば、異なる分野の知識や技術が交わることで、独自の解決策や創造的な結果が導き出されるのです。
+                    </p>
+                </div>
+            </div>
+            <div class="synergy__synergy-img">
+                <img src="./assets/synergy/LP_synergy_pc.webp" loading="lazy">
+            </div>
+        </div>
+        <p class="synergy__synergy-summary">
+            このように、点と点、線と線が交わることで、<br />
+            単独では成し得なかった成果が生まれ、<br />
+            シナジー効果が発揮されます。​<br />
+        </p>
+    </section>
+
+    <!-- solution -->
+    <section id="synergy__solution" class="synergy__section synergy__solution-section">
+        <div class="synergy__solution-background--text">Internet of Bodies</div>
+        <div class="circle circle3"></div>
+        <div class="synergy__title synergy__solution-title">
+            <h1>自分を深く理解することで、<span class="br"></span>新たな未来が待っている</h1>
+            <p>データに基づいた科学的アプローチで隠れた課題を明確化。上達をサポートします</p>
+        </div>
+        <div class="solution__area">
+            <div class="solution__card">
+                <div class="solution__number">01</div>
+                <div class="hexagon solution__hexagon">
+                    <div class="solution__card-content">
+                        <h3>データ化して活用するメリット</h3>
+                        <p>
+                            自身のパフォーマンスをデータ化することで、統計的な情報に基づいて、過去の振り返り・現在の状況・未来の予測に役立ちます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="solution__card">
+                <div class="solution__number">02</div>
+                <div class="hexagon solution_hexagon">
+                    <div class="solution__card-content">
+                        <h3>数値を意識するメリット</h3>
+                        <p>
+                            感覚や印象に頼らず、データに基づいた客観的な判断が可能になり、自己の行動を相対的に把握することが可能になります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="solution__card">
+                <div class="solution__number">03</div>
+                <div class="hexagon solution_hexagon">
+                    <div class="solution__card-content">
+                        <h3>データを可視化するメリット</h3>
+                        <p>
+                            データを可視化することで、数値では捉えにくい隠れたパターンやトレンドの把握がしやすくなり、専門的な知識がなくても直感的な理解に役立ちます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="circle circle4"></div>
+        <div class="solution__box" id="makeImg"></div>
+    </section>
+
+    <!-- product -->
+    <section id="product" class="product__section">
+        <img src="./assets/product/product_background_Img-min.webp" loading="lazy" class="product__background-Img">
+        <div class="section-title product__section-title">Products</div>
+        <div class="product__card">
+            <!-- カード1 INSOLYIS -->
+            <div class="product__card-content">
+                <img src="./assets/product/INSOLYIS_logo.svg" loading="lazy" class="logo">
+                <img src="./assets/product/product_insolyis_Img.webp" loading="lazy" class="Img">
+                <p>
+                    足圧重心（CoP）の移動を可視化<br />
+                    スイング中の体重移動やバランスがどのようになっているかを分析
+                </p>
+                <button>商品詳細を見る</button>
+            </div>
+            <!-- カード2 LYZER -->
+            <div class="product__card-content">
+                <img src="./assets/product/SHOTLYZER_logo.svg" loading="lazy" class="logo">
+                <img src="./assets/product/product_lyzer_Img.webp" loading="lazy" class="Img">
+                <p>
+                    練習場やラウンド中などいつでも簡単に自身のヘッドスピードやボールスピード、ミート率を測定
+                </p>
+                <button>商品詳細を見る</button>
+            </div>
+            <!-- カード3 Tracker -->
+            <div class="product__card-content">
+                <img src="./assets/product/ShotTracker_logo.svg" loading="lazy" class="logo">
+                <img src="./assets/product/product_tracker_Img.webp" class="Img">
+                <p>
+                    グリップに装着するだけで、面倒なクラブ選択操作を自動化プレーや練習に集中できます
+                </p>
+                <button>商品詳細を見る</button>
+            </div>
+        </div>
+        <div class="product__next-area">
+            <div class="triangle product__triangle" id="makeImg"></div>
+            <h1>練習からプレーまで<span class="br"></span>活躍する多機能デバイス</h1>
+            <p>
+                INSOLYISで足圧中心（CoP）を分析、Shot Lyzerでクラブスピードを記録。<br />
+                さらにクラブをShot Trackerで識別することで全てを自動化。<br />
+                組み合わせて使うことで、自分のパフォーマンスを効率よく把握でき、上達をサポートします。
+            </p>
+        </div>
+    </section>
+
+
+    <section id="feature" class="feature__section">
+        <h1 class="feature__title">
+            機能紹介
+        </h1>
+        <div class="feature__tab-wrapper">
+            <!-- 1つ目　アプリ連携 -->
+            <input id="TAB_01" type="radio" name="TAB" class="tab-switch" checked="checked" />
+            <label class="feature__tab" for="TAB_01">
+                <img src="./assets/feature/icon_app.svg" alt="app_icon" loading="lazy" class="tab-icon">
+                <span>アプリ連携</span>
+            </label>
+            <div class="feature__area">
+                <div class="feature__card">
+                    <div class="feature__card-Img">
+                        <picture>
+                            <!-- <source srcset="" media="(min-width: 1150px)" loading="lazy"> -->
+                            <source srcset="./assets/feature/shot_movie_min.webp" media="(min-width: 768px)"
+                                loading="lazy">
+                            <img src="./assets/feature/shot_movie_min.webp" alt="no image..." loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="feature__card-content">
+                        <div>
+                            <img src="./assets/feature/LP_feature_app.webp" loading="lazy">
+                        </div>
+                        <div class="feature__card-text">
+                            <h3>アプリを介して製品同士の機能が連携、新たな指標が明確に</h3>
+                            <p>
+                                Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br />
+                                各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br />
+                                例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2つ目　製品連携 -->
+            <input id="TAB_02" type="radio" name="TAB" class="tab-switch" />
+            <label class="feature__tab" for="TAB_02">
+                <img src="./assets/feature/icon_shot.svg" alt="app_icon" loading="lazy" class="tab-icon">
+                <span>製品連携</span>
+            </label>
+            <div class="feature__area">
+                <div class="feature__card">
+                    <div class="feature__card-Img">
+                        <picture>
+                            <!-- <source srcset="" media="(min-width: 1150px)" loading="lazy"> -->
+                            <source srcset="./assets/feature/LYZER_INSOLYIS_app.webp" media="(min-width: 768px)"
+                                loading="lazy">
+                            <img src="./assets/feature/LYZER_INSOLYIS_app.webp" alt="no image..." loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="feature__card-content">
+                        <div>
+                            <img src="./assets/feature/LP_feature_app.webp" loading="lazy">
+                        </div>
+                        <div class="feature__card-text">
+                            <h3>アプリを介して製品同士の機能が連携、新たな指標が明確に</h3>
+                            <p>
+                                Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携<br />
+                                各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。<br />
+                                例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ３つ目　LYZER スピード計測 -->
+            <input id="TAB_03" type="radio" name="TAB" class="tab-switch" />
+            <label class="feature__tab" for="TAB_03">
+                <img src="./assets/feature/icon_speed.svg" alt="app_icon" loading="lazy" class="tab-icon">
+                <span>スピード計測</span>
+            </label>
+            <div class="feature__area">
+                <div class="feature__card">
+                    <div class="feature__card-Img">
+                        <picture>
+                            <!-- <source srcset="" media="(min-width: 1150px)" loading="lazy"> -->
+                            <source srcset="./assets/feature/shot_speed_app.webp" media="(min-width: 768px)"
+                                loading="lazy">
+                            <img src="./assets/feature/shot_speed_app.webp" alt="no image..." loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="feature__card-content">
+                        <div>
+                            <img src="./assets/product/LP_product_INSOLYIS_Img2.webp" loading="lazy">
+                        </div>
+                        <div class="feature__card-text">
+                            <h3>スピードデータでショットの傾向を分析。<br />
+                                安定した飛距離で最高のプレーを</h3>
+                            <p>
+                                クラブスピード、ボールスピード、ミート率など、スイングに関わる様々なスピードデータを計測することで、自身のショットの傾向を客観的に分析できます。<br />
+                                これにより、スピードの安定性やミスショットの原因を特定し、飛距離の安定性を向上させることが可能です。<br />
+                                スピードデータを理解することで、状況に応じた最適な力加減を選べるようになり、飛距離のブレを減らすことができます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4つ目　INSOLYIS CoP計測 -->
+            <input id="TAB_04" type="radio" name="TAB" class="tab-switch" />
+            <label class="feature__tab" for="TAB_04">
+                <img src="./assets/feature/icon_cop.svg" alt="app_icon" loading="lazy" class="tab-icon">
+                <span>CoP計測</span>
+            </label>
+            <div class="feature__area">
+                <div class="feature__card">
+                    <div class="feature__card-Img">
+                        <picture>
+                            <!-- <source srcset="" media="(min-width: 1150px)" loading="lazy"> -->
+                            <source srcset="./assets/feature/shot_cop_app.webp" media="(min-width: 768px)"
+                                loading="lazy">
+                            <img src="./assets/feature/shot_cop_app.webp" alt="no image..." loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="feature__card-content">
+                        <div>
+                            <img src="./assets/feature/LP_feature_app.webp" loading="lazy">
+                        </div>
+                        <div class="feature__card-text">
+                            <h3>CoPで重心の移動を可視化。スイングの癖をデータで発見します</h3>
+                            <p>
+                                INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。<br />
+                                これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。<br />
+                                従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5つ目　Tracker トラッキング-->
+            <input id="TAB_05" type="radio" name="TAB" class="tab-switch" />
+            <label class="feature__tab" for="TAB_05">
+                <img src="./assets/feature/icon_ShotTracker-15.svg" alt="app_icon" loading="lazy" class="tab-icon">
+                <span>クラブを識別</span>
+            </label>
+            <div class="feature__area">
+                <div class="feature__card">
+                    <div class="feature__card-Img">
+                        <picture>
+                            <!-- <source srcset="" media="(min-width: 1150px)" loading="lazy"> -->
+                            <source srcset="./assets/feature/ShotTracker_sensor.webp" media="(min-width: 768px)"
+                                loading="lazy">
+                            <img src="./assets/feature/ShotTracker_sensor.webp" alt="no image..." loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="feature__card-content">
+                        <div>
+                            <img src="./assets/product/LP_product_Tracker_Img2.webp" loading="lazy">
+                        </div>
+                        <div class="feature__card-text">
+                            <h3>使用クラブを自動で認識</h3>
+                            <p>
+                                Shot Trackerはグリップにつける小さな裏方です。<br />
+                                これまで面倒だった自身のクラブをチェック、登録する行為を自動化。<br />
+                                プレー中や練習中に使用したクラブを自動で各製品のログと紐づけてくれるので、集中して取り込むことが可能になります。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="circle circle5"></div> -->
+    </section>
+
+    <!-- feature -->
+
+    <div class="section-title situation__section-title">
+        Situation
+    </div>
+    <section id="situation" class="situation__section">
+        <div class="title situation__title">
+            <h1>シチュエーションごとの活用法</h1>
+            <p>様々なシチュエーションで上達を徹底サポート</p>
+        </div>
+        <div class="situation__content">
+            <div class="situation__text">
+                <h3>ゴルフレッスンやスクールで客観的にサポート</h3>
+                <p>
+                    レッスンで使用することで改善箇所や課題をデータで可視化。<br />
+                    相対的指標の把握や可視化されたデータを用いることで、<br />
+                    客観的かつ効果的に改善課題の伝達に役立ちます。
+                </p>
+            </div>
+            <div class="situation__text">
+                <h3>日々の練習でデータを分析、効率よく上達</h3>
+                <p>
+                    毎日の練習で収集したデータをもとに、スイングの傾向や癖を把握。<br />
+                    科学的なアプローチで確実な成長を実現します
+                </p>
+            </div>
+            <div class="situation__text">
+                <h3>実際のプレー中に記録・分析し、<br />
+                    自身のプレーをフィードバック</h3>
+                <p>
+                    ラウンド中の足圧中心の移動やスイングスピードをリアルタイムに把握<br />
+                    ラウンド時と練習時の違いや課題を明確に、次のラウンドに活かせます
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="review" class="review__section">
+        <div class="triangle review__triangle" id="makeImg"></div>
+        <h3 class="title review__title">
+            実際に使ってみて
+        </h3>
+        <div class="review__content">
+            <img src="./assets/review/profile_横峯さくらプロ.webp" width="150" height="150" alt="no image...">
+            <div>
+                <p>プロゴルファー</p>
+                <h3>横峯さくらプロ</h3>
+                <p>「自身のスイングのベストな時とワーストの時とで比較したり、自身の癖を知ることができそうですね。体幹は日々の体調により前寄りとか後ろ寄りとか微妙に異なることがあり、そういったコンディションのチェックにも使えそうですね。製品のリリースすごく楽しみにしています。」
+                </p>
+            </div>
+        </div>
+        <div class="review__content">
+            <img src="./assets/review/profile_森川陽太郎氏.webp" width="150" height="150" alt="no image...">
+            <div>
+                <p>メンタルトレーナ /横峯さくらプロキャディ</p>
+                <h3>森川陽太郎氏</h3>
+                <p>「選手が話している感覚的なことを理解するのにすごく助けてもらえそうです！選手と話す時にもこの技術を使用することで、同じ方向を向いて目標に向かっていけるのではないかと思います。」</p>
+            </div>
+        </div>
+        <div class="review__content">
+            <img src="./assets/review/profile_大堀裕次郎プロ.webp" width="150" height="150" alt="no image...">
+            <div>
+                <p>プロゴルファー</p>
+                <h3>大堀裕次郎プロ</h3>
+                <p>「スイングスピードとか飛距離とか気軽に計測できてその時の足圧やバランスも分かるのって凄いですね。
+                    是非トレーニングのセルフチェックに使ってみたいと思います。」</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="detail" class="detail__section">
+        <div class="circle circle6"></div>
+        <div class="title detail__title">
+            <h3>DETAILS</h3>
+            <p>商品詳細</p>
+            <div class="detail__card-wapper">
+                <div class="detail__card-item">
+                    <div class="detail__left-content">
+                        <img src="./assets/product/SHOTLYZER_logo.svg" loading="lazy" class="logo detail__card-logo">
+                        <img src="./assets/detail/detail_lyzer_Img.webp" loading="lazy" class="detail__card-product">
+                        <span>
+                            ¥24,200- (税込)
+                        </span>
+                        <button class="button detail__button">
+                            商品を購入する
+                        </button>
+                    </div>
+                    <div class="detail__rigth-content">
+                        <table class="table-wapper">
+                            <tr>
+                                <th>本体サイズ</th>
+                                <td>高さ80mm × 幅56mm × 厚さ23.5mm</td>
+                            </tr>
+                            <tr>
+                                <th>本体重量</th>
+                                <td>約100g</td>
+                            </tr>
+                            <tr>
+                                <th>センサータイプ</th>
+                                <td>ドップラーレイダーセンサー</td>
+                            </tr>
+                            <tr>
+                                <th>速度測定範囲</th>
+                                <td>ヘッドスピード 10-99.9 m/s, ボールスピード 15-99.9m/s</td>
+                            </tr>
+                            <tr>
+                                <th>距離測定範囲</th>
+                                <td>20m～320m</td>
+                            </tr>
+                            <tr>
+                                <th>バッテリー</th>
+                                <td>リチウムバッテリー</td>
+                            </tr>
+                            <tr>
+                                <th>動作時間</th>
+                                <td>約7時間 (フル充電2時間)</td>
+                            </tr>
+                            <tr>
+                                <th>充電・通信ケーブル</th>
+                                <td>USB Type-C</td>
+                            </tr>
+                            <tr>
+                                <th>防水</th>
+                                <td>IPX4</td>
+                            </tr>
+                            <tr>
+                                <th>通信方法</th>
+                                <td>Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <th>動作温度</th>
+                                <td>'-10℃～50℃ 結露しない範囲の湿度での使用を推奨</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="detail__card-item">
+                    <div class="detail__left-content">
+                        <img src="./assets/product/INSOLYIS_logo.svg" loading="lazy" class="logo detail__card-logo">
+                        <img src="./assets/detail/detail_insolyis_Img.webp" loading="lazy" class="detail__card-product">
+                        <span>
+                            ¥39,600- (税込)
+                        </span>
+                        <button class="button detail__button">
+                            商品を購入する
+                        </button>
+                    </div>
+                    <div class="detail__rigth-content">
+                        <table class="table-wapper">
+                            <tr>
+                                <th>本体サイズ</th>
+                                <td>足サイズ:23 - 28.5cm 厚み:Toe 4mm以下、Heel 10mm以下<br />23-24mm, 24.5-25.5mm, 26-27mm,
+                                    27.5-28.5mm</td>
+                            </tr>
+                            <tr>
+                                <th>本体重量</th>
+                                <td>約45g</td>
+                            </tr>
+                            <tr>
+                                <th>搭載センサー</th>
+                                <td>圧力センサー４、加速度センサー</td>
+                            </tr>
+                            <tr>
+                                <th>バッテリー</th>
+                                <td>CR2032</td>
+                            </tr>
+                            <tr>
+                                <th>稼働時間</th>
+                                <td>25日</td>
+                            </tr>
+                            <tr>
+                                <th>防水</th>
+                                <td>IP55</td>
+                            </tr>
+                            <tr>
+                                <th>通信方法</th>
+                                <td>Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <th>動作温度</th>
+                                <td>'-10℃～50℃ 結露しない範囲の湿度での使用を推奨</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="detail__card-item">
+                    <div class="detail__left-content">
+                        <img src="./assets/product/ShotTracker_logo.svg" loading="lazy" class="logo detail__card-logo">
+                        <img src="./assets/detail/detail_tracker_Img.webp" loading="lazy"
+                            class="detail__card-product tracker-Img">
+                        <span>
+                            3set ¥13,200- (税込)<br />
+                            7set ¥13,200- (税込)
+                        </span>
+                        <button class="button detail__button">
+                            商品を購入する
+                        </button>
+                    </div>
+                    <div class="detail__rigth-content">
+                        <table class="table-wapper">
+                            <tr>
+                                <th>本体サイズ</th>
+                                <td>Φ27×25.3mm</td>
+                            </tr>
+                            <tr>
+                                <th>本体重量</th>
+                                <td>5g</td>
+                            </tr>
+                            <tr>
+                                <th>搭載センサー</th>
+                                <td>加速度、ジャイロ</td>
+                            </tr>
+                            <tr>
+                                <th>動作距離</th>
+                                <td>10m</td>
+                            </tr>
+                            <tr>
+                                <th>バッテリー</th>
+                                <td>CR2025</td>
+                            </tr>
+                            <tr>
+                                <th>動作時間</th>
+                                <td>1～2年（使用頻度による）</td>
+                            </tr>
+                            <tr>
+                                <th>防水</th>
+                                <td>IPX7（生活防水程度）</td>
+                            </tr>
+                            <tr>
+                                <th>通信方法</th>
+                                <td>Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <th>動作温度</th>
+                                <td>'-10℃～50℃ 結露しない範囲の湿度での使用を推奨</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="circle circle7"></div>
+    </section>
+
+    <section id="FAQ" class="FAQ">
+        <div class="title FAQ__title">
+            <h3>よくある質問</h3>
+            <p>Q&A</p>
+        </div>
+        <div class="FAQ__wapper">
+            <div>
+                <details class="FAQ__content">
+                    <summary>
+                        Q 初期不良があった場合、どうすれば良いですか？
+                    </summary>
+                    <p>
+                        A 当社のカスタマーセンターにお問い合わせください。
+                    </p>
+                </details>
+                <details class="FAQ__content">
+                    <summary>
+                        Q 壊れてしまった場合、どうすれば良いですか？
+                    </summary>
+                    <p>
+                        A 初期不良による故障と、故意または過失による故障では対応が異なります。まずはカスタマーセンターにご連絡ください。故障状況を工場で調査し、状況に応じて適切な対応方法を案内させていただきます。
+                    </p>
+                </details>
+                <details class="FAQ__content">
+                    <summary>
+                        Q スマートフォンを持っていないのですが、使用することはできますか？
+                    </summary>
+                    <p>
+                        A Shotlyzerは単体でクラブスピードやボールスピードの計測が可能ですが、Insolyisはスマートフォンおよび専用アプリのインストールが必要です。Shot
+                        Trackerは初期段階ではスマートフォンのアプリで対応しますが、将来的にはショットナビのGPS製品シリーズと連携予定です。
+                    </p>
+                </details>
+            </div>
+            <div>
+                <details class="FAQ__content">
+                    <summary>
+                        Q Shot Trackerを使用するクラブ本数分欲しいのですが。
+                    </summary>
+                    <p>
+                        A 単品で追加購入いただけます。製品が市場で販売開始され次第、追加購入が可能になります。
+                    </p>
+                </details>
+                <details class="FAQ__content">
+                    <summary>
+                        Q 送料について教えてください
+                    </summary>
+                    <p>
+                        A 購入金額が2,000円以上の場合、送料が無料となります<br>
+                        未満の場合、送料は500円です
+                    </p>
+                </details>
+                <details class="FAQ__content">
+                    <summary>
+                        Q 送料について教えてください
+                    </summary>
+                    <p>
+                        A 購入金額が2,000円以上の場合、送料が無料となります<br>
+                        未満の場合、送料は500円です
+                    </p>
+                </details>
+            </div>
+        </div>
+        <div class="contact">
+            <p>
+                その他ご質問やご購入など、<span class="br"></span>お気軽にお問い合わせください
+            </p>
+            <a href="https://online-shop.shotnavi.jp/" target="_blank" rel="noopener noreferrer">
+                <button>お問い合わせ</button>
+            </a>
+        </div>
+    </section>
+
+    <div class="uk-container uk-container-xlarge">
+        <div class="uk-section-xsmall">
+            <hr>
+            <div class="uk-section-xsmall uk-text-center">
+                <div>
+                    <a href="/docs/service/"><button class="uk-button uk-button-secondary uk-margin">ご利用案内</button></a>
+                    <a href="/docs/info/rule.php"><button
+                            class="uk-button uk-button-secondary uk-margin">ご利用規約</button></a>
+                    <a href="/docs/info/privacy.php"><button
+                            class="uk-button uk-button-secondary uk-margin">プライバシーポリシー</button></a>
+                    <a href="/docs/info/hanbai.php"><button
+                            class="uk-button uk-button-secondary uk-margin">特定商取引に基づく表示</button></a>
+                    <a href="http://www.techtuit.co.jp/"><button
+                            class="uk-button uk-button-secondary uk-margin">会社情報</button></a>
+                </div>
+            </div>
+            <div class="uk-section-xsmall uk-text-right uk-padding-remove -uk-margin-remove">
+                <small>「Shot Navi」はテクタイト株式会社の登録商標です。
+                    <br>Copyright © 2022 Techtuit Co., Ltd. All Rights Reserved.</small>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
