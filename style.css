@@ -163,7 +163,7 @@ button.active,
 .hamburger,
 .line,
 .test-slick2__item,
-.synergy__concept-title {
+.synergy__concept-title h2 {
     opacity: 1;
     transform: none;
 }
@@ -496,29 +496,6 @@ HEADER 統一するので仮置き
 }
 
 
-/* header */
-/* .synergy__header {
-    width: 100%;
-    height: 100px;
-}
-
-.uk-navbar .uk-navbar-nav {
-    width: auto;
-    height: auto;
-}
-
-.uk-logo {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-}
-
-.synergy__header-logo {
-    opacity: 1;
-    transform: none;
-    margin: 0 auto;
-} */
-
 /* TOP */
 #synergy__top {
     width: 100%;
@@ -608,35 +585,32 @@ HEADER 統一するので仮置き
     background-position: 10% 100%;
 }
 
-.synergy__concept-title {
+.synergy__concept-title h1 {
     font-size: 3rem;
     background: linear-gradient(180deg, #ffffff 0%, #8BB6D1 40%, #186EA3 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: skewX(-15deg);
+    transform: skewX(-30deg);
     font-weight: 100;
     text-align: right;
+    margin: 0 50px 0 0;
     animation: slideBottom 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    position: relative;
-    z-index: 3;
-    opacity: 1;
 }
 
-.synergy__concept-title h2:nth-child(1) {
-    margin-right: 200px;
+.synergy__concept-title h1:nth-child(1) {
+    margin-right: 250px;
 }
 
-.synergy__concept-title h1 {
-    position: relative;
-    z-index: 3;
-    font-size: 2.5rem;
-    transform: skewX(-15deg);
+.synergy__concept-section--title {
+    color: #378BDB;
     font-weight: bold;
-    text-align: center;
+    margin: 0 10vw;
+    transform: skewX(-15deg);
+    font-size: 1.5rem;
 }
 
 .synergy__concept-container p {
-    margin: 3vw 10vw;
+    margin: 1vw 10vw 3vw 10vw;
     font-weight: 100;
     font-size: 1.2rem;
     letter-spacing: 0.4rem;
@@ -713,6 +687,7 @@ PRODUCT
     animation: fadeup 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
     margin: 10vw 0;
     padding: 0;
+    position: relative;
 }
 
 .synergy__product-copy {
@@ -764,7 +739,7 @@ PRODUCT
 .synergy__product-card::before,
 .synergy__product-card::after {
     content: "";
-    position: relative;
+    position: absolute;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -936,10 +911,18 @@ FEATURE
 }
 
 .synergy__feature-img {
-    width: 60%;
+    width: 55%;
     height: fit-content;
     object-fit: contain;
     border-radius: 15px;
+}
+
+.synergy__content-text span {
+    letter-spacing: 1rem;
+}
+
+.synergy__content-text h3 {
+    margin: 1vw 0;
 }
 
 @media (max-width: 960px) {
@@ -957,199 +940,7 @@ FEATURE
     }
 }
 
-
-
-
-/* SYNERGY */
-/* #synergy__synergy {
-    max-width: 100%;
-    height: auto;
-    background: radial-gradient(circle at center, rgba(0, 8, 255, 0.534) 0%, rgba(255, 255, 255, 0) 70%);
-    background-size: 55vw 55vw;
-    background-repeat: no-repeat;
-    background-position: 80% 100%;
-    padding: 0;
-}
-
-.synergy__synergy-section {
-    padding: 6vw 6vw 12vw 6vw;
-    overflow: hidden;
-}
-
-.synergy__synergy-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2vw;
-}
-
-.synergy__synergy-title:before,
-.synergy__synergy-title:after {
-    content: "";
-    height: 4px;
-    flex-grow: 1;
-    background-color: #00b3ff;
-}
-
-.synergy__synergy-title:before {
-    margin-right: 1rem;
-}
-
-.synergy__synergy-title:after {
-    margin-left: 1rem;
-}
-
-
-.synergy__synergy-wrapper {
-    display: flex;
-    padding: 0 6vw;
-}
-
-.synergy__section-title {
-    color: #378BDB;
-    text-align: right;
-    margin-bottom: -50px;
-    position: relative;
-    z-index: 5;
-    padding: 0 6vw;
-}
-
-.synergy__synergy-area {
-    margin-right: 50px;
-    width: 50vw;
-}
-
-.synergy__synergy-area p {
-    letter-spacing: 0.4em;
-}
-
-.synergy__synergy-title--sub {
-    font-size: 1.5rem;
-    letter-spacing: 0.6em;
-    font-weight: 500;
-}
-
-.synergy__synergy-text h3 {
-    font-size: 1.2rem;
-    margin: 2vw 0 1vw 0;
-}
-
-.synergy__synergy-text p {
-    letter-spacing: 0em;
-}
-
-.synergy__synergy-img img {
-    width: 40vw;
-    height: auto;
-    overflow: hidden;
-    object-fit: cover;
-    display: inline-block;
-    position: relative;
-    z-index: 4;
-}
-
-.synergy__synergy-summary {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 200;
-    letter-spacing: 1vw;
-    margin: 50px auto 100px auto;
-}
-
-@media (max-width: 960px) {
-    .synergy__wrapper {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .synergy__area {
-        text-align: center;
-        margin: 8vw 0 0 0;
-        width: 100%;
-    }
-
-    .synergy__title {
-        letter-spacing: 0;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 2vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .synergy__area p {
-        margin-bottom: 6vw;
-    }
-
-    .synergy__text {
-        display: flex;
-        gap: 4vw;
-        margin: 0;
-    }
-
-    .synergy__Img {
-        content: url("./assets/synergy/LP_synergy_mobile.webp");
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        object-fit: contain;
-    }
-
-    .synergy__summary {
-        letter-spacing: calc(10px + (14 - 10) * ((100vw - 769px) / (1150 - 769)));
-    }
-}
-
-@media (max-width: 768px) and (min-width: 375px) {
-    .synergy__section-title {
-        margin-bottom: -30px;
-    }
-
-    .synergy__wrapper {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .synergy__area {
-        text-align: center;
-        margin: 6vw 0 0 0;
-        width: 100%;
-    }
-
-    .synergy__title {
-        letter-spacing: 0;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 2vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .synergy__area p {
-        margin-bottom: 40px;
-    }
-
-    .synergy__text {
-        gap: 4vh;
-        margin: 0;
-        font-size: 16px;
-    }
-
-    .synergy__Img {
-        content: url("./assets/synergy/LP_synergy_mobile.webp");
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        object-fit: contain;
-    }
-
-    .synergy__summary {
-        letter-spacing: calc(-0.5px + (12 - -0.5) * ((100vw - 375px) / (768 - 375)));
-    }
-} */
-
-
+/* synergy */
 .lp_base_dark {
     padding: 0;
     margin: 0;
