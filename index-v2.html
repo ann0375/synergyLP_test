@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="no description">
+
+    <!-- UIkitのCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/css/uikit.min.css" />
+    <!-- UIkitのJavaScript（jQuery不要）-->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.3/dist/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" href="./style-v2.css">
+    <script src="./feature.js" defer></script>
+    <title>LP test</title>
+</head>
+
+<body class="all">
+
+
+    <!-- HEADER 統一するので仮置き -->
+    <header id="header" class="header__container">
+        <nav class="header__nav-container">
+            <ul class="header__nav-lists">
+                <div class="header__logo-container">
+                    <a class="logo" href="https://shotnavi.jp/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/ShotNavi ロゴ_白赤2種.png" style="max-width:150px;" class="ShotNavi_logo">
+                    </a>
+                </div>
+                <div class="header__menu-container">
+                    <li class="header__nav-item"><a href="https://shotnavi.jp/" target="_blank"
+                            rel="noopener noreferrer" class="h_menu">HOME</a></li>
+                    <li class="header__nav-item">
+                        <!-- <a href="https://shotnavi.jp/snp/" target="_blank" rel="noopener noreferrer" class="h_menu shotnavi_menu"> --><span
+                            class="h_menu shotnavi_menu">SHOTNAVI</span><!-- </a> -->
+                        <ul class="dropdown_lists">
+                            <div class="dropdown_category first_column">
+                                <span class="shotnavi_category">SHOT NAVI GPS</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/beyondlite_plus/"
+                                        target="_blank" rel="noopener noreferrer">Beyond Lite Plus</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/crest2_tch" target="_blank"
+                                        rel="noopener noreferrer">Crest II Touch</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/infinity_tch" target="_blank"
+                                        rel="noopener noreferrer">INFINITY Touch</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolve_se" target="_blank"
+                                        rel="noopener noreferrer">Evolve SE</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolve_alpha" target="_blank"
+                                        rel="noopener noreferrer">Evolve α</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/exceeds" target="_blank"
+                                        rel="noopener noreferrer">EXCEEDS</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/crest2" target="_blank"
+                                        rel="noopener noreferrer">Crest II</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/airex" target="_blank"
+                                        rel="noopener noreferrer">AIR EX</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolveprotouch"
+                                        target="_blank" rel="noopener noreferrer">Evolve PRO Touch</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/infinity" target="_blank"
+                                        rel="noopener noreferrer">INFINITY</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolvepro" target="_blank"
+                                        rel="noopener noreferrer">Evolve PRO</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/granz" target="_blank"
+                                        rel="noopener noreferrer">Granz</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/neo2hp" target="_blank"
+                                        rel="noopener noreferrer">NEO2 HP</a></li>
+                            </div>
+                            <div class="dropdown_category second_column"><span class="shotnavi_category">VOICE
+                                    LASER</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/voicelaser/grleo"
+                                        target="_blank" rel="noopener noreferrer">GR Leo</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/voicelaser/redleo"
+                                        target="_blank" rel="noopener noreferrer">Red LEO</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/voicelaser/leo"
+                                        target="_blank" rel="noopener noreferrer">Leo</a></li>
+                                <span class="shotnavi_category">LASER SNIPER-</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/nanogr"
+                                        target="_blank" rel="noopener noreferrer">nano GR</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/raysgr"
+                                        target="_blank" rel="noopener noreferrer">RAYS GR</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/rays"
+                                        target="_blank" rel="noopener noreferrer">RAYS</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/elua"
+                                        target="_blank" rel="noopener noreferrer">ELUA</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/nano"
+                                        target="_blank" rel="noopener noreferrer">nano</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/x1fit2"
+                                        target="_blank" rel="noopener noreferrer">X1 Fit2 1000</a></li>
+                            </div>
+                            <div class="dropdown_category third_column"><span class="shotnavi_category">NEXIA</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/nexia/accuragr" target="_blank"
+                                        rel="noopener noreferrer">Accura GR</a></li>
+                                <span class="shotnavi_category">その他</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/" target="_blank"
+                                        rel="noopener noreferrer">全ての製品情報</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item"><a href="https://shotnavi.jp/scolog/" target="_blank"
+                            rel="noopener noreferrer" class="h_menu">SCOログ</a></li>
+                    <li class="header__nav-item"><a
+                            href="https://online-shop.shotnavi.jp/?_gl=1*10qkecw*_gcl_aw*R0NMLjE3MzczMzU1MzIuQ2owS0NRaUE0cks4QmhEN0FSSXNBRmU1TFhMZVlVeXpseHlpV2MzeEpYVy1xdlhxNVlKU2h5YzdHLWFkZ1N1WExkVlVINl8xb3BZaDhhd2FBdS1LRUFMd193Y0I.*_gcl_au*MTMwMzYxODM5Ny4xNzM2MTQxMjMz"
+                            target="_blank" rel="noopener noreferrer" class="h_menu">
+                            公式ショップ</a></li>
+                    <li class="header__nav-item"><a href="https://shotnavi.jp/mypage/" target="_blank"
+                            rel="noopener noreferrer" class="h_menu">マイページ</a></li>
+                </div>
+            </ul>
+            <!-- ハンバーガーメニュー（768px以下で表示） -->
+            <div class="hamburger-menu">
+                <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
+                    <div class="hamburger">
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+                        <div class="line" id="line3"></div>
+                    </div>
+                    <span class="header__hamburger_menu">MENU</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="https://shotnavi.jp/" target="_blank" rel="noopener noreferrer" class="h_menu">HOME</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="https://shotnavi.jp/snp/" target="_blank" rel="noopener noreferrer"
+                            class="h_menu h_shotnavi_menu">SHOTNAVI</a>
+                        <ul class="h_dropdown_lists">
+                            <div class="dropdown_category first_column">
+                                <span class="shotnavi_category">SHOT NAVI GPS</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/beyondlite_plus/"
+                                        target="_blank">Beyond Lite Plus</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/crest2_tch"
+                                        target="_blank">Crest II Touch</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/infinity_tch"
+                                        target="_blank">INFINITY Touch</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolve_se" target="_blank"
+                                        rel="noopener noreferrer">Evolve SE</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolve_alpha" target="_blank"
+                                        rel="noopener noreferrer">Evolve α</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/exceeds" target="_blank"
+                                        rel="noopener noreferrer">EXCEEDS</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/crest2" target="_blank"
+                                        rel="noopener noreferrer">Crest II</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/airex" target="_blank"
+                                        rel="noopener noreferrer">AIR EX</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolveprotouch"
+                                        target="_blank" rel="noopener noreferrer">Evolve PRO Touch</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/infinity" target="_blank"
+                                        rel="noopener noreferrer">INFINITY</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/evolvepro" target="_blank"
+                                        rel="noopener noreferrer">Evolve PRO</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/granz" target="_blank"
+                                        rel="noopener noreferrer">Granz</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/neo2hp" target="_blank"
+                                        rel="noopener noreferrer">NEO2 HP</a></li>
+                            </div>
+                            <div class="dropdown_category second_column">
+                                <span class="shotnavi_category">VOICE LASER</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/voicelaser/grleo"
+                                        target="_blank" rel="noopener noreferrer">GR Leo</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/voicelaser/redleo"
+                                        target="_blank" rel="noopener noreferrer">Red LEO</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/voicelaser/leo"
+                                        target="_blank" rel="noopener noreferrer">Leo</a></li>
+                                <span class="shotnavi_category">LASER SNIPER-</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/nanogr"
+                                        target="_blank" rel="noopener noreferrer">nano GR</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/raysgr"
+                                        target="_blank" rel="noopener noreferrer">RAYS GR</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/rays"
+                                        target="_blank" rel="noopener noreferrer">RAYS</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/elua"
+                                        target="_blank" rel="noopener noreferrer">ELUA</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/nano"
+                                        target="_blank" rel="noopener noreferrer">nano</a></li>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/lasersniper/x1fit2"
+                                        target="_blank" rel="noopener noreferrer">X1 Fit2 1000</a></li>
+                            </div>
+                            <div class="dropdown_category third_column"><span class="shotnavi_category">NEXIA</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/nexia/accuragr" target="_blank"
+                                        rel="noopener noreferrer">Accura GR</a></li>
+                                <span class="shotnavi_category">その他</span>
+                                <li class="dropdown_list"><a href="https://shotnavi.jp/snp/" target="_blank"
+                                        rel="noopener noreferrer">全ての製品情報</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="https://shotnavi.jp/scolog/" target="_blank" rel="noopener noreferrer"
+                            class="h_menu">SCOログ</a></li>
+                    <li><a href="https://shotnavi.jp/gc/" target="_blank" rel="noopener noreferrer"
+                            class="h_menu">ゴルフ場情報</a></li>
+                    <li><a href="https://online-shop.shotnavi.jp/" target="_blank" rel="noopener noreferrer"
+                            class="h_menu">公式ショップ</a></li>
+                    <li><a href="https://shotnavi.jp/mypage/" target="_blank" rel="noopener noreferrer"
+                            class="h_menu">マイページ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".hamburger-icon").classList.toggle("open");
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+
+
+
+    <!-- ヘッダー -->
+    <!-- <section id="header" class="synergy__header no-animation">
+        <div class="uk-container uk-container-expand">
+            <div uk-navbar="" class="uk-navbar">
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="https://shotnavi.jp/">
+                        <img src="./assets/ShotNavi ロゴ_白赤2種.png" width="150px" style="max-width:150px;"
+                            class="synergy__header-logo"></a>
+                </div>
+                <ul class="uk-navbar-nav uk-visible@s uk-subnav-divider uk-text-center uk-margin-left">
+                    <li><a href="https://shotnavi.jp/">HOME</a></li>
+                    <li class="uk-text-left">
+                        <a href="https://shotnavi.jp/snp/" role="button" aria-haspopup="true">ShotNavi</a>
+                        <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2 uk-drop"
+                            style="top: 95px; left: 283.172px; max-width: 1624px;">
+                            <div class="uk-navbar-dropdown-grid uk-child-width-1-2 uk-grid uk-grid-stack" uk-grid="">
+                                <div class="uk-first-column">
+
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-nav-header">Shot Navi GPS</li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li class="uk-active"><a href="/snp/air/">Air (New!)</a></li>
+                                        <li><a href="/snp/crest/">Crest</a></li>
+                                        <li><a href="/snp/evolve/">W1 Evolve</a></li>
+                                        <li><a href="/snp/beyondlite/">HuG beyond Lite</a></li>
+                                        <li><a href="/snp/beyond/">HuG beyond</a></li>
+                                        <li><a href="/snp/neo2hp/">NEO2 HP</a></li>
+                                        <li><a href="/snp/hugfw/">HuG-FW</a></li>
+                                        <li><a href="/snp/v2/">V2</a></li>
+                                        <li><a href="/snp/w1fw/">W1-FW</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-nav-header">Voice Laser</li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href="/snp/voicelaser/redleo/">Red LEO</a></li>
+                                        <li><a href="/snp/voicelaser/leo/">LEO</a></li>
+                                        <li class="uk-nav-header">Laser Sinper</li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href="/snp/lasersniper/nano/">nano</a></li>
+                                        <li><a href="/snp/lasersniper/x1fit2/">Fit2 1000</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="https://shotnavi.jp/scolog/">SCOログ</a></li>
+                    <li><a href="https://shotnavi.jp/gc/">ゴルフ場情報</a></li>
+                    <li><a href="https://shotnavi.thebase.in/" target="_blank">公式ショップ</a></li>
+                    <li><a href="https://shotnavi.jp/mypage/">マイページ</a></li>
+                </ul>
+
+                <div class="uk-navbar-right uk-hidden@s">
+                    <div class="uk-navbar-nav">
+                        <li class="uk-active uk-padding-remove"><a href="#" role="button" aria-haspopup="true"
+                                aria-label="Open menu"><span uk-navbar-toggle-icon=""
+                                    class="uk-icon uk-navbar-toggle-icon"><svg width="20" height="20"
+                                        viewBox="0 0 20 20">
+                                        <style>
+                                            .uk-navbar-toggle-icon svg&gt;
+
+                                            [class*="line-"] {
+                                                transition: 0.2s ease-in-out;
+                                                transition-property: transform, opacity;
+                                                transform-origin: center;
+                                                opacity: 1
+                                            }
+
+                                            .uk-navbar-toggle-icon svg&gt;
+
+                                            .line-3 {
+                                                opacity: 0
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-3 {
+                                                opacity: 1
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-2 {
+                                                transform: rotate(45deg)
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-3 {
+                                                transform: rotate(-45deg)
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+                                            .line-1,
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-4 {
+                                                opacity: 0
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-1 {
+                                                transform: translateY(6px) scaleX(0)
+                                            }
+
+                                            .uk-navbar-toggle-animate[aria-expanded="true"] svg&gt;
+
+                                            .line-4 {
+                                                transform: translateY(-6px) scaleX(0)
+                                            }
+                                        </style>
+                                        <rect width="20" height="2" y="3" class="line-1"></rect>
+                                        <rect width="20" height="2" y="9" class="line-2"></rect>
+                                        <rect width="20" height="2" y="9" class="line-3"></rect>
+                                        <rect width="20" height="2" y="15" class="line-4"></rect>
+                                    </svg></span> <span class="uk-margin-small-left">Menu</span></a>
+                            <div class="uk-navbar-dropdown uk-drop">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="https://shotnavi.jp/">HOME</a></li>
+                                    <li><a href="https://shotnavi.jp/snp/">ShotNavi</a></li>
+                                    <li><a href="https://shotnavi.jp/scolog/">SCOログ</a></li>
+                                    <li><a href="https://shotnavi.jp/gc/">ゴルフ場情報</a></li>
+                                    <li><a href="https://shotnavi.thebase.in/" target="_blank">公式ショップ</a></li>
+                                    <li><a href="https://shotnavi.jp/mypage/">マイページ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- トップ・MV -->
+    <section id="synergy__top" class="synergy__section synergy__top-section">
+        <div class="hero-img synergy___hero-img">
+            <div>
+                <picture>
+                    <source srcset="./assets/top/MV_product_1150px.webp" media="(max-width: 960px)" loading="lazy">
+                    <img src="./assets/top/MV_product.webp" alt="no image..." loading="lazy"
+                        class="synergy__top-foreground">
+                </picture>
+            </div>
+            <p class="synergy__copy synergy__top-copy--sub">
+                スイングの癖を客観的に知る！
+            </p>
+            <h1 class="synergy__copy synergy__top-copy">
+                データでゴルフは<span style="font-size:1.4em">進化</span>する
+            </h1>
+        </div>
+    </section>
+
+    <div class="synergy__section-space--top"></div>
+
+    <!-- コンセプト -->
+    <section id="synergy__concept" class="synergy__section synergy__concept-section">
+        <div class="synergy__concept-container">
+            <div class="synergy__concept-title">
+                <h1>スイング関わる</h1>
+                <h1>様々な指標を可視化</h1>
+            </div>
+            <div class="synergy__concept-section--title">Mission</div>
+            <p class="synergy__p">
+                私たちは、<br />ゴルフスイングの効果的な<span class="synergy__br-640px"></span>トレーニングを実現するため、<br />
+                タイミング、精度、姿勢などの技術要素を<span class="synergy__br-960px synergy__br-640px"></span>効率的に把握できる製品は実現できないか<span
+                    class="synergy__br-960px synergy__br-640px"></span>というコンセプトを基に<span
+                    class="synergy__br-1600px synergy__br-640px"></span>新しい製品を企画し開発しました。<br />
+                そこで見えてきたのは<span class="synergy__br-640px"></span>既存の技術を結び合わせることで<span
+                    class="synergy__br-960px synergy__br-640px"></span>新たな価値を提案できるという答えでした。
+            </p>
+        </div>
+    </section>
+
+    <div class="synergy__section-space--concept"></div>
+
+
+    <!-- 動画 -->
+    <section id="synergy__movie" class="synergy__section synergy__movie-section">
+        <div class="synergy__movie-title">
+            <h2 class="synergy__h2">あなたのベストショットをデータ化</h2>
+        </div>
+        <img src="./assets/shot_movie_min.webp" alt="no image..." class="synergy__shot-movie">
+    </section>
+
+    <!-- product -->
+    <section id="synergy__product" class="synergy__section synergy__product-section">
+        <!-- <img src="./assets/product/product_background_Img-min.webp" loading="lazy" class="product__background-Img"> -->
+        <h2 class="synergy__product-copy">
+            ベストショット3種の神器
+        </h2>
+        <p class="synergy__p synergy__product-text">
+            ゴルフは「再現性のスポーツ」と言われますが、<br />
+            その再現性を高めるには、スイング時のクラブの動きやパフォーマンスを正確に把握することが重要です。<br />
+            しかし、その過程で負担が大きくなるとプレーや練習に集中しづらくなってしまいます。<br />
+            そこで私たちは、これらの指標を簡単に取得できる3種類のセンサーを活用したソリューションを提案します。
+        </p>
+        <img src="./assets/detail_45300_17409651554970.webp" alt="no image..." class="synergy__product-main--img">
+        <!-- <div class="synergy__section-title synergy__product-section--title">Products</div> -->
+        <div class="synergy__product-card">
+            <!-- カード1 INSOLYIS -->
+            <div class="synergy__product-content">
+                <img src="./assets/product/INSOLYIS_logo.svg" loading="lazy" class="synergy__product-logo">
+                <img src="./assets/product/lp__synergy_img-insolyis--3.webp" height="233" loading="lazy"
+                    class="synergy__product-img">
+                <p class="synergy__p">
+                    足圧重心（CoP）の移動を可視化<br />
+                    スイング中の体重移動やバランスがどのようになっているかを分析
+                </p>
+                <button class="synergy__button">商品詳細を見る</button>
+            </div>
+            <!-- カード2 LYZER -->
+            <div class="synergy__product-content">
+                <img src="./assets/product/SHOTLYZER_logo.svg" loading="lazy" class="synergy__product-logo">
+                <img src="./assets/product/lp__synergy_img-shotlyzer.webp" loading="lazy" class="synergy__product-img">
+                <p class="synergy__p">
+                    練習場やラウンド中などいつでも簡単に自身のヘッドスピードやボールスピード、ミート率を測定
+                </p>
+                <button class="synergy__button">商品詳細を見る</button>
+            </div>
+            <!-- カード3 Tracker -->
+            <div class="synergy__product-content">
+                <img src="./assets/product/ShotTracker_logo.svg" loading="lazy" class="synergy__product-logo">
+                <img src="./assets/product/lp__synergy_img-shottracker.webp" class="synergy__product-img">
+                <p class="synergy__p">
+                    グリップに装着するだけで、面倒なクラブ選択操作を自動化プレーや練習に集中できます
+                </p>
+                <button class="synergy__button">商品詳細を見る</button>
+            </div>
+        </div>
+        <div class="product__next-area">
+            <div class="triangle product__triangle" id="makeImg"></div>
+            <!-- <h1 class="synergy__h1">練習からプレーまで<span class="synergy__br"></span>活躍する多機能デバイス</h1> -->
+            <p class="synergy__p">
+                これらのセンサーの役割により、<br />
+                <br />
+                <span style="font-size:1.4em">・スイングの指標となるスイングパフォーマンスの把握<br />
+                    ・スイング時の体の動き、足圧バランスや足圧中心の確認<br />
+                    ・クラブの自動認識による手間の削減<br /></span>
+                <br />
+                を実現し、これにより、「ゴルフにおける再現性」を高めるための指標となる、<br />
+                スイングのパフォーマンスと体重移動に関連する足圧中心（COP）や前後左右のバランスといった<br />
+                データの因果関係が把握できるようになります。
+            </p>
+        </div>
+    </section>
+
+
+
+    <section id="synergy__feature" class="synergy__feature-section synergy__section">
+        <h2 class="synergy__title synergy__feature-title">
+            機能と特徴
+        </h2>
+        <div class="synergy__feature-content">
+            <img src="./assets/feature/shot_movie_min.webp" alt="no image..." class="synergy__feature-img">
+            <div class="synergy__content-text">
+                <h1 class="synergy__h1"><span style="color: #9FA3A9;">01</span></h1>
+                <h3 class="synergy__h3">
+                    アプリを介して製品同士の機能が連携、新たな指標が明確に
+                </h3>
+                <p class="synergy__p">
+                    Shotlyzer、Insolyis、ShotTrackerおよびShotNavi製品がアプリを介して連携
+                    各製品の各機能単体での指標が別の指標やデータと結びつくことで、新たな発見や課題が見えてきます。
+                    例えば、ShotlyzerによるスイングスピードのデータとInsolyisによる足圧中心の遷移を連携することで、１打毎のスイングの良し悪しや改善内容が把握しやすくなります。
+                </p>
+            </div>
+        </div>
+        <div class="synergy__feature-content">
+            <img src="./assets/feature/lp_app2.webp" alt="no image..." class="synergy__feature-img">
+            <div class="synergy__content-text">
+                <h1 class="synergy__h1"><span style="color: #9FA3A9;">02</span></h1>
+                <h3 class="synergy__h3">
+                    軽量かつコンパクト
+                </h3>
+                <p class="synergy__p">
+                    クレジットカードよりも小さく、ポケットに入れて持ち歩けるコンパクトボディ設計​<br />
+                    練習場や庭、ラウンド中などいつでもどこでも気軽に計測が行えます。
+                </p>
+            </div>
+        </div>
+        <div class="synergy__feature-content">
+            <img src="./assets/feature/shot_speed_app.webp" alt="no image..." class="synergy__feature-img">
+            <div class="synergy__content-text">
+                <h1 class="synergy__h1"><span style="color: #9FA3A9;">03</span></h1>
+                <h3 class="synergy__h3">
+                    スピードデータでショットの傾向を分析。
+                    安定した飛距離で最高のプレーを
+                </h3>
+                <p class="synergy__p">
+                    クラブスピード、ボールスピード、ミート率など、スイングに関わる様々なスピードデータを計測することで、自身のショットの傾向を客観的に分析できます。
+                    これにより、スピードの安定性やミスショットの原因を特定し、飛距離の安定性を向上させることが可能です。
+                    スピードデータを理解することで、状況に応じた最適な力加減を選べるようになり、飛距離のブレを減らすことができます。
+                </p>
+            </div>
+        </div>
+        <div class="synergy__feature-content">
+            <img src="./assets/feature/shot_cop_app.webp" alt="no image..." class="synergy__feature-img">
+            <div class="synergy__content-text">
+                <h1 class="synergy__h1"><span style="color: #9FA3A9;">04</span></h1>
+                <h3 class="synergy__h3">
+                    CoPで重心の移動を可視化。スイングの癖をデータで発見します
+                </h3>
+                <p class="synergy__p">
+                    INSOLYISではCoP(足圧重心)を測ることで重心の移動を可視化し、自身で客観視しづらい姿勢の癖や傾向を明確にします。
+                    これによりどのタイミングで重心が崩れ、スイングが安定していないのかを瞬時に把握でき、効率的な修正が可能です。
+                    <!-- 従来の感覚や経験に頼った練習から一歩進み、データに基づく科学的なアプローチからスイングを最適化し、パフォーマンス向上を実現します。 -->
+                </p>
+            </div>
+        </div>
+        <div class="synergy__feature-content">
+            <img src="./assets/feature/ShotTracker_sensor.webp" alt="no image..." class="synergy__feature-img">
+            <div class="synergy__content-text">
+                <h1 class="synergy__h1"><span style="color: #9FA3A9;">05</span></h1>
+                <h3 class="synergy__h3">
+                    使用クラブを自動で認識
+                </h3>
+                <p class="synergy__p">
+                    Shot Trackerはグリップにつける小さな裏方です。
+                    これまで面倒だった自身のクラブをチェック、登録する行為を自動化。
+                    プレー中や練習中に使用したクラブを自動で各製品のログと紐づけてくれるので、集中して取り込むことが可能になります。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- シナジー -->
+    <section id="synergy__synergy" class="synergy__synergy-section">
+        <h2 class="synergy__title synergy__synergy-title">
+            製品連携でより便利に
+        </h2>
+        <div class="uk-section uk-section-secondary lp_base_dark" style=" background-color: #110F1B; position:
+            relative;">
+            <div class="uk-container uk-container-large uk-padding-remove synergy__synergy-container"
+                style="position: relative;">
+                <div class="uk-margin-remove uk-child-width-expand@m" uk-grid>
+                    <div class="uk-flex-last@m uk-cover-container">
+                        <!-- <div class="lp__section_title lp__section_title_synergy">
+                            Synergy</div> -->
+                        <img src="./assets/synergy/LP_synergy_pc.webp" alt="" class="lp__session_margin30"
+                            uk-cover><canvas width="400" height="500"></canvas>
+                    </div>
+
+                    <div class="uk-width-3-5@m uk-width-1-2@l uk-margin-right lp__session_margin30">
+
+                        <h3 class="uk-heading lp__text_ls06">
+                            製品と製品が繋がることで<br />生まれるシナジー効果
+                        </h3>
+                        <p class="lp__text_ls08">
+                            様々な指標を計測する製品が連携することで、単独の製品のみでは得られない新たな価値を創造します。
+                        </p>
+
+
+                        <div>
+                            <h3 class="uk-heading uk-heading-bullet">点と点のシナジー</h3>
+
+                            <p class="synergy__p">
+                                「点と点がつながることで、個々の力が掛け算のように増幅する。」​単独では何もない点が、他の点と結びつくことで初めて力を発揮します。それぞれが持つポテンシャルが組み合わさり、全体としては個々の合計を超える力を生み出すのです。まるでバラバラだったピースがひとつになり、全く新しい価値を生み出すような感覚です。
+                            </p>
+
+
+
+                            <h3 class="uk-heading uk-heading-bullet">線と線のシナジー</h3>
+                            <p class="synergy__p">
+                                「線と線が交差することで、直線では見えなかった可能性が広がる。」​個々の線が交わることで、新しい方向性や視点が生まれ、それぞれの線がもつエネルギーや情報が融合し、予想以上の価値を生み出します。たとえば、異なる分野の知識や技術が交わることで、独自の解決策や創造的な結果が導き出されるのです。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="uk-padding uk-text-center uk-text-large lp__text_ls08 synergy__synergy-summary">
+                    このように、点と点、線と線が交わることで、<span class="uk-visible@s"><br /></span>
+                    単独では成し得なかった成果が生まれ、<span class="uk-visible@s"><br /></span>
+                    シナジー効果が発揮されます。
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- solution -->
+    <section id="synergy__solution" class="synergy__section synergy__solution-section">
+        <div class="synergy__solution-background--text">Internet of Bodies</div>
+        <div class="synergy__title synergy__solution-title">
+            <h2 class="synergy__h2">自分を深く理解することで、<span class="synergy__br"></span>新たな未来が待っている</h2>
+            <p class="synergy__p">データに基づいた科学的アプローチで隠れた課題を明確化。<span class="synergy__br"></span>上達をサポートします</p>
+        </div>
+        <div class="synergy__solution-area">
+            <div class="synergy__solution-card">
+                <div class="synergy__solution-number">01</div>
+                <div class="hexagon synergy__solution-hexagon">
+                    <div class="synergy__solution-card--content">
+                        <h3 class="synergy__h3">データ化して活用するメリット</h3>
+                        <p class="synergy__p">
+                            自身のパフォーマンスをデータ化することで、統計的な情報に基づいて、過去の振り返り・現在の状況・未来の予測に役立ちます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="synergy__solution-card">
+                <div class="synergy__solution-number">02</div>
+                <div class="hexagon synergy__solution-hexagon">
+                    <div class="synergy__solution-card--content">
+                        <h3 class="synergy__h3">数値を意識するメリット</h3>
+                        <p class="synergy__p">
+                            感覚や印象に頼らず、データに基づいた客観的な判断が可能になり、自己の行動を相対的に把握することが可能になります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="synergy__solution-card">
+                <div class="synergy__solution-number">03</div>
+                <div class="hexagon synergy__solution-hexagon">
+                    <div class="synergy__solution-card--content">
+                        <h3 class="synergy__h3">データを可視化するメリット</h3>
+                        <p class="synergy__p">
+                            データを可視化することで、数値では捉えにくい隠れたパターンやトレンドの把握がしやすくなり、専門的な知識がなくても直感的な理解に役立ちます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="synergy__solution-rect" id="makeImg"></div>
+    </section>
+
+    <!-- <div class="section-title situation__section-title">
+        Situation
+    </div> -->
+    <section id="synergy__situation" class="synergy__section synergy__situation-section">
+        <div class="synergy__title synergy__situation-title">
+            <h2 class="synergy__h2">シチュエーションごとの活用法</h2>
+            <p class="synergy__p">様々なシチュエーションで上達を徹底サポート</p>
+        </div>
+        <div class="synergy__situation-content">
+            <div class="synergy__situation-text">
+                <h3 class="synergy__h3">ゴルフレッスンやスクールで客観的にサポート</h3>
+                <p class="synergy__p">
+                    レッスンで使用することで改善箇所や課題をデータで可視化。<br />
+                    相対的指標の把握や可視化されたデータを用いることで、<br />
+                    客観的かつ効果的に改善課題の伝達に役立ちます。
+                </p>
+            </div>
+            <div class="synergy__situation-text">
+                <h3 class="synergy__h3">日々の練習でデータを分析、効率よく上達</h3>
+                <p class="synergy__p">
+                    毎日の練習で収集したデータをもとに、スイングの傾向や癖を把握。<br />
+                    科学的なアプローチで確実な成長を実現します
+                </p>
+            </div>
+            <div class="synergy__situation-text">
+                <h3 class="synergy__h3">実際のプレー中に記録・分析し、<br />
+                    自身のプレーをフィードバック</h3>
+                <p class="synergy__p">
+                    ラウンド中の足圧中心の移動やスイングスピードをリアルタイムに把握<br />
+                    ラウンド時と練習時の違いや課題を明確に、次のラウンドに活かせます
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="triangle synergy__review-triangle" id="makeImg"></div>
+
+    <section id="synergy__review" class="synergy__section synergy__review-section">
+        <h3 class="synergy__title synergy__review-title">
+            実際に使ってみて
+        </h3>
+        <div class="synergy__review-content">
+            <img src="./assets/review/profile_横峯さくらプロ.webp" width="150" height="150" alt="no image...">
+            <div>
+                <p class="synergy__p">プロゴルファー</p>
+                <h3 class="synergy__h3">横峯さくらプロ</h3>
+                <p class="synergy__p">
+                    「自身のスイングのベストな時とワーストの時とで比較したり、自身の癖を知ることができそうですね。体幹は日々の体調により前寄りとか後ろ寄りとか微妙に異なることがあり、そういったコンディションのチェックにも使えそうですね。製品のリリースすごく楽しみにしています。」
+                </p>
+            </div>
+        </div>
+        <div class="synergy__review-content">
+            <img src="./assets/review/profile_森川陽太郎氏.webp" width="150" height="150" alt="no image...">
+            <div>
+                <p class="synergy__p">メンタルトレーナ /横峯さくらプロキャディ</p>
+                <h3 class="synergy__h3">森川陽太郎氏</h3>
+                <p class="synergy__p">
+                    「選手が話している感覚的なことを理解するのにすごく助けてもらえそうです！選手と話す時にもこの技術を使用することで、同じ方向を向いて目標に向かっていけるのではないかと思います。」</p>
+            </div>
+        </div>
+        <div class="synergy__review-content">
+            <img src="./assets/review/profile_大堀裕次郎プロ.webp" width="150" height="150" alt="no image...">
+            <div>
+                <p class="synergy__p">プロゴルファー</p>
+                <h3 class="synergy__h3">大堀裕次郎プロ</h3>
+                <p class="synergy__p">「スイングスピードとか飛距離とか気軽に計測できてその時の足圧やバランスも分かるのって凄いですね。
+                    是非トレーニングのセルフチェックに使ってみたいと思います。」</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="synergy__detail" class="synergy__section synergy__detail-section">
+        <div class="synergy__title synergy__detail-title">
+            <h3 class="synergy__h3">DETAILS</h3>
+            <p class="synergy__p">商品詳細</p>
+            <div class="synergy__detail-card--wapper">
+                <div class="synergy__detail-card">
+                    <div class="synergy__detail-content--left">
+                        <img src="./assets/product/SHOTLYZER_logo.svg" loading="lazy" class="logo synergy__detail-logo">
+                        <img src="./assets/detail/detail_lyzer_Img.webp" loading="lazy" class="synergy__detail-img">
+                        <span>
+                            ¥24,200- (税込)
+                        </span>
+                        <button class="synergy__button">
+                            商品を購入する
+                        </button>
+                    </div>
+                    <div class="synergy__detail-content--right">
+                        <table class="synergy__detaule-table--wapper">
+                            <tr>
+                                <th>本体サイズ</th>
+                                <td>高さ80mm × 幅56mm × 厚さ23.5mm</td>
+                            </tr>
+                            <tr>
+                                <th>本体重量</th>
+                                <td>約100g</td>
+                            </tr>
+                            <tr>
+                                <th>センサータイプ</th>
+                                <td>ドップラーレイダーセンサー</td>
+                            </tr>
+                            <tr>
+                                <th>速度測定範囲</th>
+                                <td>ヘッドスピード 10-99.9 m/s, ボールスピード 15-99.9m/s</td>
+                            </tr>
+                            <tr>
+                                <th>距離測定範囲</th>
+                                <td>20m～320m</td>
+                            </tr>
+                            <tr>
+                                <th>バッテリー</th>
+                                <td>リチウムバッテリー</td>
+                            </tr>
+                            <tr>
+                                <th>動作時間</th>
+                                <td>約7時間 (フル充電2時間)</td>
+                            </tr>
+                            <tr>
+                                <th>充電・通信ケーブル</th>
+                                <td>USB Type-C</td>
+                            </tr>
+                            <tr>
+                                <th>防水</th>
+                                <td>IPX4</td>
+                            </tr>
+                            <tr>
+                                <th>通信方法</th>
+                                <td>Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <th>動作温度</th>
+                                <td>'-10℃～50℃ 結露しない範囲の湿度での使用を推奨</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="synergy__detail-card">
+                    <div class="synergy__detail-content--left">
+                        <img src="./assets/product/INSOLYIS_logo.svg" loading="lazy" class="logo synergy__detail-logo">
+                        <img src="./assets/detail/detail_insolyis_Img.webp" loading="lazy" class="synergy__detail-img">
+                        <span>
+                            ¥39,600- (税込)
+                        </span>
+                        <button class="synergy__button">
+                            商品を購入する
+                        </button>
+                    </div>
+                    <div class="synergy__detail-content--right">
+                        <table class="synergy__detaule-table--wapper">
+                            <tr>
+                                <th>本体サイズ</th>
+                                <td>足サイズ:23 - 28.5cm 厚み:Toe 4mm以下、Heel 10mm以下<br />23-24mm, 24.5-25.5mm, 26-27mm,
+                                    27.5-28.5mm</td>
+                            </tr>
+                            <tr>
+                                <th>本体重量</th>
+                                <td>約45g</td>
+                            </tr>
+                            <tr>
+                                <th>搭載センサー</th>
+                                <td>圧力センサー４、加速度センサー</td>
+                            </tr>
+                            <tr>
+                                <th>バッテリー</th>
+                                <td>CR2032</td>
+                            </tr>
+                            <tr>
+                                <th>稼働時間</th>
+                                <td>25日</td>
+                            </tr>
+                            <tr>
+                                <th>防水</th>
+                                <td>IP55</td>
+                            </tr>
+                            <tr>
+                                <th>通信方法</th>
+                                <td>Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <th>動作温度</th>
+                                <td>'-10℃～50℃ 結露しない範囲の湿度での使用を推奨</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="synergy__detail-card">
+                    <div class="synergy__detail-content--left">
+                        <img src="./assets/product/ShotTracker_logo.svg" loading="lazy"
+                            class="logo synergy__detail-logo">
+                        <img src="./assets/detail/detail_tracker_Img.webp" loading="lazy"
+                            class="synergy__detail-img synergy__detail-img--shottracker">
+                        <span>
+                            3set ¥13,200- (税込)<br />
+                            7set ¥13,200- (税込)
+                        </span>
+                        <button class="synergy__button">
+                            商品を購入する
+                        </button>
+                    </div>
+                    <div class="synergy__detail-content--right">
+                        <table class="synergy__detaule-table--wapper">
+                            <tr>
+                                <th>本体サイズ</th>
+                                <td>Φ27×25.3mm</td>
+                            </tr>
+                            <tr>
+                                <th>本体重量</th>
+                                <td>5g</td>
+                            </tr>
+                            <tr>
+                                <th>搭載センサー</th>
+                                <td>加速度、ジャイロ</td>
+                            </tr>
+                            <tr>
+                                <th>動作距離</th>
+                                <td>10m</td>
+                            </tr>
+                            <tr>
+                                <th>バッテリー</th>
+                                <td>CR2025</td>
+                            </tr>
+                            <tr>
+                                <th>動作時間</th>
+                                <td>1～2年（使用頻度による）</td>
+                            </tr>
+                            <tr>
+                                <th>防水</th>
+                                <td>IPX7（生活防水程度）</td>
+                            </tr>
+                            <tr>
+                                <th>通信方法</th>
+                                <td>Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <th>動作温度</th>
+                                <td>'-10℃～50℃ 結露しない範囲の湿度での使用を推奨</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="synergy___faq" class="synergy__section synergy__faq-section">
+        <div class="synergy__title synergy__faq-title">
+            <h3 class="synergy__h3">よくある質問</h3>
+            <p class="synergy__p">FAQ</p>
+        </div>
+        <div class="synergy__faq-area">
+            <div>
+                <details class="synergy__faq-box">
+                    <summary>
+                        Q 初期不良があった場合、どうすれば良いですか？
+                    </summary>
+                    <p class="synergy__p">
+                        A 当社のカスタマーセンターにお問い合わせください。
+                    </p>
+                </details>
+                <details class="synergy__faq-box">
+                    <summary>
+                        Q 壊れてしまった場合、どうすれば良いですか？
+                    </summary>
+                    <p class="synergy__p">
+                        A 初期不良による故障と、故意または過失による故障では対応が異なります。まずはカスタマーセンターにご連絡ください。故障状況を工場で調査し、状況に応じて適切な対応方法を案内させていただきます。
+                    </p>
+                </details>
+                <details class="synergy__faq-box">
+                    <summary>
+                        Q スマートフォンを持っていないのですが、使用することはできますか？
+                    </summary>
+                    <p class="synergy__p">
+                        A Shotlyzerは単体でクラブスピードやボールスピードの計測が可能ですが、Insolyisはスマートフォンおよび専用アプリのインストールが必要です。Shot
+                        Trackerは初期段階ではスマートフォンのアプリで対応しますが、将来的にはショットナビのGPS製品シリーズと連携予定です。
+                    </p>
+                </details>
+            </div>
+            <div>
+                <details class="synergy__faq-box">
+                    <summary>
+                        Q Shot Trackerを使用するクラブ本数分欲しいのですが。
+                    </summary>
+                    <p class="synergy__p">
+                        A 単品で追加購入いただけます。製品が市場で販売開始され次第、追加購入が可能になります。
+                    </p>
+                </details>
+                <details class="synergy__faq-box">
+                    <summary>
+                        Q 送料について教えてください
+                    </summary>
+                    <p class="synergy__p">
+                        A 購入金額が2,000円以上の場合、送料が無料となります<br>
+                        未満の場合、送料は500円です
+                    </p>
+                </details>
+                <details class="synergy__faq-box">
+                    <summary>
+                        Q 送料について教えてください
+                    </summary>
+                    <p class="synergy__p">
+                        A 購入金額が2,000円以上の場合、送料が無料となります<br>
+                        未満の場合、送料は500円です
+                    </p>
+                </details>
+            </div>
+        </div>
+        <div class="synergy__contact">
+            <p class="synergy__p">
+                その他ご質問やご購入など、<span class="synergy__br"></span>お気軽にお問い合わせください
+            </p>
+            <a href="https://online-shop.shotnavi.jp/" target="_blank" rel="noopener noreferrer">
+                <button class="synergy__contact-button">お問い合わせ</button>
+            </a>
+        </div>
+    </section>
+
+    <div class="uk-container uk-container-xlarge">
+        <div class="uk-section-xsmall">
+            <hr>
+            <div class="uk-section-xsmall uk-text-center">
+                <div>
+                    <a href="/docs/service/"><button class="uk-button uk-button-secondary uk-margin">ご利用案内</button></a>
+                    <a href="/docs/info/rule.php"><button
+                            class="uk-button uk-button-secondary uk-margin">ご利用規約</button></a>
+                    <a href="/docs/info/privacy.php"><button
+                            class="uk-button uk-button-secondary uk-margin">プライバシーポリシー</button></a>
+                    <a href="/docs/info/hanbai.php"><button
+                            class="uk-button uk-button-secondary uk-margin">特定商取引に基づく表示</button></a>
+                    <a href="http://www.techtuit.co.jp/"><button
+                            class="uk-button uk-button-secondary uk-margin">会社情報</button></a>
+                </div>
+            </div>
+            <div class="uk-section-xsmall uk-text-right uk-padding-remove -uk-margin-remove">
+                <small>「Shot Navi」はテクタイト株式会社の登録商標です。
+                    <br>Copyright © 2022 Techtuit Co., Ltd. All Rights Reserved.</small>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
